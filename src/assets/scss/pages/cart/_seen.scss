@@ -1,0 +1,7 @@
+.seen{
+    &__title{
+        @include h2;
+        margin-bottom: 60rem;
+        text-align: center;
+    }
+}

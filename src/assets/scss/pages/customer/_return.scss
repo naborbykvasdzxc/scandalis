@@ -1,0 +1,30 @@
+.return {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    max-width: 727rem;
+
+    &__title {
+        @include h3;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+    }
+
+    &__head{
+        @include bigTextCupsSB;
+    }
+
+    &__image{
+        width: 230rem;
+        height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

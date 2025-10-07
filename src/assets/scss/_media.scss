@@ -1,0 +1,22 @@
+html {
+    font-size: calc(100vw / 1920);
+  }
+  
+  @media (max-width: 1200px) {
+    html {
+      font-size: calc(100vw / 1200);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: calc(100vw / 768);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: calc(100vw / 360);
+    }
+  }
+  

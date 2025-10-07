@@ -1,0 +1,47 @@
+.history-intro {
+    position: relative;
+    height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40rem;
+
+    &__bg{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        padding: 40rem 100rem;
+        gap: 20rem;
+        justify-self: center;
+        width: fit-content;
+    }
+
+    &__title{
+        @include bodyCups;
+    }
+
+    &__logo{
+        width: 429rem;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

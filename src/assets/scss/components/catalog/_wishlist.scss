@@ -1,0 +1,39 @@
+.wishlist {
+    &__title {
+        @include h2;
+        text-align: center;
+        margin-bottom: 40rem;
+    }
+
+    &__empty {
+        padding: 150rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10rem;
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20rem;
+            background: linear-gradient(93deg, #000 -16.42%, #BFBFBF 37.3%, #000 74.06%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include bodyCupsBold;
+
+            &::before {
+                content: '';
+                background: linear-gradient(93deg, #000 -16.42%, #BFBFBF 37.3%, #000 74.06%);
+                @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='41' viewBox='0 0 41 41' fill='none'%3E%3Cpath d='M20.5 1L24.9903 14.8197H39.5211L27.7654 23.3607L32.2557 37.1803L20.5 28.6393L8.7443 37.1803L13.2346 23.3607L1.47887 14.8197H16.0097L20.5 1Z' stroke='%23696969' stroke-miterlimit='1' stroke-linejoin='round'/%3E%3C/svg%3E", 40rem)
+            }
+        }
+
+        p {
+            color: var(--grey-700);
+            margin-bottom: 40rem;
+        }
+    }
+}

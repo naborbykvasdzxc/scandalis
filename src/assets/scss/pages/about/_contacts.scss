@@ -1,0 +1,226 @@
+.contacts {
+    padding-top: 100rem;
+
+    &--page {
+        padding-top: 40rem;
+    }
+
+    &__map {
+        width: 1420rem;
+        height: 900rem;
+        background-color: var(--grey-50);
+    }
+
+
+    &__title {
+        @include h2;
+        text-align: center;
+        margin-bottom: 60rem;
+    }
+
+    &__top {
+        display: flex;
+        align-items: stretch;
+        border-top: 1rem solid var(--grey-200, #E6E6E6);
+        border-bottom: 1rem solid var(--grey-200, #E6E6E6);
+
+        &-left {
+            padding: 20rem 60rem 20rem calc((100vw - var(--container-width)) / 2);
+            border-right: 1rem solid var(--grey-200, #E6E6E6);
+            width: 500rem;
+            flex: 0 0 auto;
+            position: relative;
+        }
+    }
+
+    &__droplist {
+        opacity: 0;
+        border: 1rem solid var(--grey-200, #E6E6E6);
+        background: #FFF;
+        box-shadow: 0 0 9.7rem 0 rgba(0, 0, 0, 0.14);
+        position: absolute;
+        top: 90%;
+        background-color: var(--white);
+        left: 60rem;
+        width: 100%;
+        z-index: 10;
+        pointer-events: none;
+        visibility: hidden;
+        translate: 0 20rem;
+        transition: opacity var(--transition), translate var(--transition);
+
+        &.active {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+            translate: 0 0;
+        }
+
+        &-element {
+            @include bodyCups;
+            padding: 20rem;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            background-color: transparent;
+            transition: background-color var(--transition);
+
+            @media (hover:hover) {
+                &:hover{
+                    background-color: var(--grey-50, #F8F8F8);
+                }
+            }
+
+
+            &::after {
+                content: '';
+                width: 6rem;
+                height: 6rem;
+                background-color: var(--black);
+                opacity: 0;
+                transition: opacity var(--transition);
+            }
+
+            &.active {
+                background-color: var(--grey-50, #F8F8F8);
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__dropbutton {
+        @include bodyCups;
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+
+        &::after {
+            content: '';
+            @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M19 8L12 15L5 8' stroke='%23020202' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 24rem);
+        }
+    }
+
+    &__top-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include bodyCupsBold;
+        gap: 40rem;
+        flex-grow: 1;
+        padding: 20rem calc((100vw - var(--container-width)) / 2) 20rem 60rem;
+    }
+
+
+    .vgmap-tile-class {
+        filter: grayscale(100%);
+    }
+
+    .marker-icon {
+        width: 44rem;
+        height: 44rem;
+    }
+
+    .map-marker.no-label {
+        .marker-text {
+            display: none;
+        }
+    }
+
+    .marker-text {
+        background-color: var(--black);
+        color: var(--white);
+        @include bodyCups;
+        position: absolute;
+        left: calc(100% - 10rem);
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5rem 10rem;
+    }
+
+    .ol {
+        &-zoom {
+            display: none;
+
+        }
+
+        &-rotate {
+            display: none;
+        }
+
+        &-attribution {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            button {
+                display: none;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+    }
+
+    &__buttons {
+        width: 460rem;
+        flex: 0 0 auto;
+        max-height: 870rem;
+        overflow-y: scroll;
+        margin-top: 30rem;
+        margin-right: 40rem;
+        scrollbar-width: 9rem;
+    }
+
+    &__name {
+        @include bigTextCupsSB;
+        margin-bottom: 20rem;
+    }
+
+    &__city {
+        @include bodyCups;
+        margin-bottom: 5rem;
+    }
+
+    &__address {
+        @include bodyCups;
+        margin-bottom: 30rem;
+        color: var(--grey-600);
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__time {
+        @include bodyCups;
+        color: var(--grey-600);
+    }
+
+    &__link {
+        @include bodyCups;
+        padding-block: 5rem;
+        border-bottom: 1rem solid var(--black, #E6E6E6);
+    }
+
+
+    &__button {
+        padding: 30rem 60rem 30rem calc((100vw - var(--container-width)) / 2);
+        cursor: pointer;
+        border-bottom: 1rem solid var(--grey-200, #E6E6E6);
+        background-color: transparent;
+        transition: background-color var(--transition);
+
+        @media(hover: hover) {
+            &:hover {
+                background-color: var(--grey-50);
+            }
+        }
+    }
+}

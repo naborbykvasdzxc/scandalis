@@ -1,0 +1,263 @@
+.checkout {
+    &__title {
+        @include h3;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 40rem;
+        max-width: 880rem;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 30rem;
+    }
+
+    &__head {
+        @include h4;
+    }
+
+    &__customer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20rem;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+
+        &--email {
+            grid-column: span 2;
+        }
+
+        p {
+            @include smallTextReg;
+
+            span {
+                color: var(--error);
+            }
+        }
+    }
+
+    &__delivery-options {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+    }
+
+    &__radio {
+        display: flex;
+        gap: 10rem;
+        cursor: pointer;
+
+        p {
+            @include bodyCupsBold;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked {
+                &+.radio-decor {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+
+        .radio-decor {
+            border-radius: 100rem;
+            border: 1rem solid var(--grey-300);
+            background: var(--white);
+            width: 20rem;
+            height: 20rem;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:after {
+                content: '';
+                width: 10rem;
+                height: 10rem;
+                border-radius: 100rem;
+                background: var(--black);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__payment {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+
+        .checkout__radio {
+            p {
+                display: flex;
+                flex-direction: column;
+                gap: 7rem;
+
+                span {
+                    color: var(--grey-500);
+                    @include body9;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+
+    &__send {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 20rem;
+        cursor: pointer;
+        max-width: 700rem;
+
+        @media (hover:hover) {
+            &:hover {
+                .checkbox-decor {
+                    border-color: var(--black);
+                }
+            }
+        }
+
+        a{
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked {
+                &~.checkbox-decor {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .checkbox-decor {
+            border: 1rem solid var(--grey-300);
+            background: var(--white);
+            width: 20rem;
+            height: 20rem;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+            &::after {
+                content: '';
+                width: 8rem;
+                height: 8rem;
+                background: var(--black);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__button {
+        width: 267rem;
+    }
+
+    &__address {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20rem;
+
+        label{
+            &:nth-child(1){
+                grid-column: span 3;
+            }
+
+            &:nth-child(5){
+                grid-column: span 3;
+            }
+        }
+    }
+
+    &__products{
+        display: flex;
+        flex-direction: column;
+        gap: 40rem;
+    }
+
+    &__product{
+        display: flex;
+        padding-block: 10rem;
+        gap: 40rem;
+
+        &-image{
+            width: 113rem;
+            flex: 0 0 auto;
+            height: 140rem;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+
+        &-content{
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+            height: auto;
+            flex-grow: 1;
+        }
+
+        &-name{
+            @include bigTextCupsSB;
+            margin-bottom: 10rem;
+        }
+
+        &-info{
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+
+            p{
+                display: flex;
+                align-items: center;
+                gap: 10rem;
+
+                span{
+                   color: var(--grey-500);
+                }
+            }
+        }
+
+        &-price{
+            margin-top: auto;
+            margin-left: auto;
+        }
+    }
+    
+}

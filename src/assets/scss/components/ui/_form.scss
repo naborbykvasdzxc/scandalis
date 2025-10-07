@@ -1,0 +1,62 @@
+.form{
+    &__policy{
+        display: flex;
+        align-items: flex-start;
+        gap: 20rem;
+        position: relative;
+        cursor: pointer;
+
+        @media (hover: hover) {
+            &:hover{
+                .policy-decor{
+                    border-color: var(--grey-300);
+                }
+            }
+        }
+
+        
+        input{
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked{
+                +.policy-decor{
+                    &::before{
+                        scale: 1;
+                    }
+                }
+            }
+        }
+
+        .policy-decor{
+            width: 24rem;
+            height: 24rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1rem solid var(--grey-500);
+            transition: border-color var(--transition);
+
+            &::before{
+                content: "";
+                scale: 0;
+                transition: scale var(--transition);
+                @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20 6L9 17L4 12' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 24rem);
+            }
+        }
+
+        a{
+            color: var(--grey-500);
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            transition: color var(--transition);
+
+            @media (hover: hover) {
+                &:hover{
+                    color: var(--grey-300);
+                }
+            }
+        }
+    }
+}

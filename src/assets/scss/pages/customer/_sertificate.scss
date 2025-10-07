@@ -1,0 +1,176 @@
+.sertificate {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    max-width: 727rem;
+    position: relative;
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 40rem);
+        width: 633rem;
+        height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 25rem;
+        width: 426rem;
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+            align-items: flex-start;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        border: 1rem solid var(--grey-300, #BCBCBC);
+        padding: 3rem;
+        width: fit-content;
+    }
+
+    &__target {
+        @include smallTextSB;
+        width: 209rem;
+        padding: 10rem 20rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+
+        &:has(input:checked) {
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+
+        }
+    }
+
+    &__tooltip {
+        @include smallTextSB;
+        padding: 10rem 0;
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+
+        &::after {
+            content: '';
+            @include iconMask("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 4L14 10L6 16' stroke='%23020202'/%3E%3C/svg%3E%0A", 24rem)
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+
+        textarea {
+            @include placeholder(#BCBCBC);
+            width: 100%;
+            padding: 10rem 20rem;
+            border: 1rem solid var(--grey-200, #E6E6E6);
+            resize: none;
+            outline: none;
+            height: 103rem;
+            letter-spacing: 1.44rem;
+        }
+    }
+
+    &__nominal {
+        position: relative;
+        border: 1rem solid var(--grey-300, #BCBCBC);
+        padding: 10rem 17rem;
+        cursor: pointer;
+        @include smallTextReg;
+        width: 99rem;
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:has(input:checked) {
+            background-color: var(--black);
+            color: var(--white);
+        }
+    }
+
+    &__optional {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+
+        span {
+            @include smallTextReg2;
+            letter-spacing: .7rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+
+        .form__policy {
+            @include smallTextReg;
+            gap: 10rem;
+            color: var(--grey-500);
+            p{
+                a{
+                    color: var(--black);
+                }
+            }
+        }
+    }
+
+    &__message {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        margin-top: 15rem;
+        color: var(--grey-500);
+
+        span{
+            @include smallTextReg;
+        }
+    }
+}

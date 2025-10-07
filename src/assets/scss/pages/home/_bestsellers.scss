@@ -1,0 +1,72 @@
+.bestsellers {
+    padding: 100rem 0;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__swiper {
+        width: 100%;
+        position: relative;
+    }
+
+    &__title {
+        @include h2;
+        margin-bottom: 20rem;
+    }
+
+    &__subtitle {
+        @include bodyCups;
+        margin-bottom: 60rem;
+    }
+
+    &__next,
+    &__prev {
+        position: absolute;
+        display: flex;
+        width: 60rem;
+        height: 60rem;
+        padding: 18rem;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border: 1rem solid var(--grey-200, #E6E6E6);
+        background: rgba(255, 255, 255, 0.01);
+        backdrop-filter: blur(19rem);
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity var(--transition);
+
+        &.swiper-button-disabled {
+            opacity: 0;
+        }
+
+        &.swiper-button-lock {
+            display: none;
+        }
+    }
+
+    &__next {
+        right: -19rem;
+
+        &::before {
+            content: '';
+            @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M8.5 5.5L15.5 12.5L8.5 19.5' stroke='%237E7E7E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 100%);
+        }
+    }
+
+    &__prev {
+        left: -19rem;
+
+        &::before {
+            content: '';
+            @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M8.5 5.5L15.5 12.5L8.5 19.5' stroke='%237E7E7E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 100%);
+            rotate: 180deg;
+        }
+
+
+    }
+}

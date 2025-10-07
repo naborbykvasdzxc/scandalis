@@ -1,0 +1,10 @@
+.jobs{
+    &__title{
+        @include h2;
+        margin-bottom: 60rem;
+    }
+
+    &__container{
+        position: relative;
+    }
+}

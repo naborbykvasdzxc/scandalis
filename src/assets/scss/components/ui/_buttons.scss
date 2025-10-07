@@ -1,0 +1,31 @@
+.button {
+    text-align: center;
+
+    @include button;
+    padding: 17.5rem 30rem;
+
+    &--border {
+        border: 1rem solid var(--grey-300);
+    }
+
+    &--filled{
+        background-color: var(--black);
+        color: var(--white);
+    }
+}
+
+.link{
+    @include button;
+    color: var(--black);
+    padding-block: 3rem;
+    border-bottom: 2rem solid currentColor;
+    width: fit-content;
+
+    &--white{
+        color: var(--white);
+    }
+
+    &--error{
+        color: var(--error);
+    }
+}

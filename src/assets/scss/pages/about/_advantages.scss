@@ -1,0 +1,35 @@
+.advantages {
+    background-color: var(--black);
+    color: var(--white);
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1rem solid var(--grey-800);
+        border-bottom: 1rem solid var(--grey-800);
+    }
+
+    &__item {
+        padding: 150rem 40rem;
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: 0 0 51.8px 0 rgba(255, 255, 255, 0.03) inset;
+        display: flex;
+        align-items: center;
+        gap: 30rem;
+        flex-direction: column;
+        text-align: center;
+
+
+        &:not(:last-child) {
+            border-right: 1rem solid var(--grey-800);
+        }
+    }
+
+    &__head{
+        @include h3;
+    }
+
+    &__text{
+        @include bodyCups;
+    }
+}

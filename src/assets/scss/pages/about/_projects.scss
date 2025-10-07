@@ -1,0 +1,25 @@
+.projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    &__title{
+        @include h2;
+        margin-bottom: 20rem;
+    }
+
+    &__subtitle{
+        max-width: 880rem;
+        @include bodyCups;
+        margin-bottom: 60rem;
+        color: var(--grey-700);
+    }
+
+    &__container{
+        position: relative;
+    }
+
+    &__swiper{
+        max-width: 1380rem;
+    }
+}

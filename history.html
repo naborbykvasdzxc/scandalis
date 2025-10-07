@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="./src/assets/fonts/manrope-v20-cyrillic_cyrillic-ext_latin_latin-ext-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./src/assets/fonts/manrope-v20-cyrillic_cyrillic-ext_latin_latin-ext-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./src/assets/fonts/manrope-v20-cyrillic_cyrillic-ext_latin_latin-ext-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <title>Vite Project</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top" aria-label="Баннеры">
+        <div class="wrapper">
+          <div class="header__navigation">
+            <button
+              class="header__prev"
+              aria-label="Предыдущий баннер"
+            ></button>
+            <button class="header__next" aria-label="Следующий баннер"></button>
+          </div>
+          <div class="header__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide header__slide">
+                -10% На новую коллекцию
+              </div>
+              <div class="swiper-slide header__slide">
+                Скидка 20% на все товары
+              </div>
+              <div class="swiper-slide header__slide">Бесплатная доставка</div>
+            </div>
+          </div>
+          <button
+            type="button"
+            aria-label="Закрыть баннеры"
+            class="header__close"
+          ></button>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="wrapper">
+          <button class="header__menu" data-burger-button>Меню</button>
+          <a href="/" class="header__logo">
+            <img
+              src="./src/assets/img/logo.svg"
+              alt="Логотип"
+              aria-label="Логотип"
+            />
+          </a>
+          <div class="header__right">
+            <button
+              class="header__search"
+              data-search-button
+              aria-label="Поиск"
+            ></button>
+            <div class="header__language">
+              <button
+                class="header__language-btn"
+                aria-label="Изменить язык"
+                aria-expanded="false"
+                aria-controls="language-dropdown"
+              >
+                ru
+              </button>
+              <div
+                class="header__language-dropdown"
+                aria-hidden="true"
+                id="language-dropdown"
+              >
+                <button class="header__language-item" aria-label="Русский">
+                  RU
+                </button>
+                <button class="header__language-item" aria-label="Английский">
+                  EN
+                </button>
+              </div>
+            </div>
+            <div class="header__shop">
+              <a href="#" class="header__wishlist" aria-label="Избранное">
+                <span class="counter active">99</span>
+              </a>
+              <a href="#" class="header__basket" aria-label="Корзина">
+                <span class="counter active">99</span>
+              </a>
+              <a
+                href="#"
+                class="header__account"
+                aria-label="Личный кабинет"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="burger">
+        <div class="burger__fade" data-burger-button></div>
+        <div class="burger__body">
+          <div class="burger__left">
+            <div class="burger__top">
+              <a href="/" class="burger__logo">
+                <img
+                  src="./src/assets/img/logo.svg"
+                  alt="Логотип"
+                  aria-label="Логотип"
+                />
+              </a>
+              <ul class="burger__list">
+                <!-- <button> если есть подкатегории, <a> если подкатегорий нет -->
+                <li class="burger__item">
+                  <a href="#" class="burger__link">sale</a>
+                </li>
+                <li class="burger__item">
+                  <button type="button" class="burger__link" data-submenu="man">
+                    Мужское
+                  </button>
+                </li>
+                <li class="burger__item">
+                  <button
+                    type="button"
+                    class="burger__link"
+                    data-submenu="woman"
+                  >
+                    Женское
+                  </button>
+                </li>
+                <li class="burger__item">
+                  <button
+                    type="button"
+                    class="burger__link"
+                    data-submenu="collections"
+                  >
+                    Коллекции
+                  </button>
+                </li>
+                <li class="burger__item">
+                  <a href="#" class="burger__link">Аксессуары</a>
+                </li>
+              </ul>
+            </div>
+            <div class="burger__bottom">
+              <ul class="burger__list">
+                <li class="burger__item">
+                  <a href="" class="burger__link">О компании</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">История бренда</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">блог</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Карьера</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Покупателям</a>
+                </li>
+                <li class="burger__item">
+                  <a href="" class="burger__link">Контакты и магазины</a>
+                </li>
+              </ul>
+              <div class="burger__socials">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="nofollow"
+                  class="burger__icon tg"
+                ></a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="nofollow"
+                  class="burger__icon wa"
+                ></a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="nofollow"
+                  class="burger__icon vk"
+                ></a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="nofollow"
+                  class="burger__icon email"
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="burger__right">
+            <div class="burger__images">
+              <a href="" class="burger__image" aria-label="Мужская коллекция"
+                ><img
+                  src="./src/assets/img/burger-image-1.webp"
+                  alt="Мужская коллекция"
+              /></a>
+              <a href="" class="burger__image" aria-label="Женская коллекция"
+                ><img
+                  src="./src/assets/img/burger-image-2.webp"
+                  alt="Женская коллекция"
+              /></a>
+            </div>
+            <div class="burger__submenus">
+              <div class="burger__submenu" data-submenu-target="man">
+                <button type="button" class="burger__default">
+                  Вернуться назад
+                </button>
+                <ul class="burger__list">
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Смотреть все</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">футболки</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Свитшоты и худи</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Джинсы и брюки</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Рубашки</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Верхняя одежда</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Шорты</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">ЛОнгсливы</a>
+                  </li>
+                  <li class="burger__item">
+                    <a href="" class="burger__link">Свитера</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <div class="search__fade" data-search-button></div>
+        <div class="search__body">
+          <div class="wrapper">
+            <a href="/" class="search__logo">
+              <img
+                src="./src/assets/img/logo.svg"
+                alt="Логотип"
+                aria-label="Логотип"
+              />
+            </a>
+            <form class="search__form">
+              <input
+                type="search"
+                name="search"
+                class="search__input"
+                placeholder="Поиск"
+              />
+              <button
+                type="submit"
+                class="search__button submit"
+                aria-label="Поиск"
+              ></button>
+              <button
+                type="button"
+                data-search-button
+                class="search__button close"
+                aria-label="Закрыть поиск"
+              ></button>
+            </form>
+            <div class="search__bottom">
+              <div class="search__head">bestsellers</div>
+              <div class="search__grid">
+                <a href="#" class="product">
+                  <div class="product__image">
+                    <img
+                      src="./src/assets/img/product-1.webp"
+                      alt="Анорак на молнии"
+                    />
+                    <div class="product__stickers">
+                      <div class="sticker">HIT</div>
+                      <div class="sticker">new collection</div>
+                    </div>
+                  </div>
+                  <div class="product__content">
+                    <div class="product__name">Анорак на молнии</div>
+                    <div class="product__price">
+                      <div class="product__price-new">17 990 ₽</div>
+                      <div class="product__price-old">18 990 ₽</div>
+                    </div>
+                    <div class="product__info">Долями по 7 687</div>
+                  </div>
+                </a>
+                <a href="#" class="product">
+                  <div class="product__image">
+                    <img
+                      src="./src/assets/img/product-1.webp"
+                      alt="Анорак на молнии"
+                    />
+                    <div class="product__stickers">
+                      <div class="sticker">HIT</div>
+                      <div class="sticker">new collection</div>
+                    </div>
+                  </div>
+                  <div class="product__content">
+                    <div class="product__name">Анорак на молнии</div>
+                    <div class="product__price">
+                      <div class="product__price-new">17 990 ₽</div>
+                      <div class="product__price-old">18 990 ₽</div>
+                    </div>
+                    <div class="product__info">Долями по 7 687</div>
+                  </div>
+                </a>
+                <a href="#" class="product">
+                  <div class="product__image">
+                    <img
+                      src="./src/assets/img/product-1.webp"
+                      alt="Анорак на молнии"
+                    />
+                    <div class="product__stickers">
+                      <div class="sticker">HIT</div>
+                      <div class="sticker">new collection</div>
+                    </div>
+                  </div>
+                  <div class="product__content">
+                    <div class="product__name">Анорак на молнии</div>
+                    <div class="product__price">
+                      <div class="product__price-new">17 990 ₽</div>
+                      <div class="product__price-old">18 990 ₽</div>
+                    </div>
+                    <div class="product__info">Долями по 7 687</div>
+                  </div>
+                </a>
+                <a href="#" class="product">
+                  <div class="product__image">
+                    <img
+                      src="./src/assets/img/product-1.webp"
+                      alt="Анорак на молнии"
+                    />
+                    <div class="product__stickers">
+                      <div class="sticker">HIT</div>
+                      <div class="sticker">new collection</div>
+                    </div>
+                  </div>
+                  <div class="product__content">
+                    <div class="product__name">Анорак на молнии</div>
+                    <div class="product__price">
+                      <div class="product__price-new">17 990 ₽</div>
+                      <div class="product__price-old">18 990 ₽</div>
+                    </div>
+                    <div class="product__info">Долями по 7 687</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="history-intro">
+        <div class="history-intro__bg">
+          <picture>
+            <source
+              srcset="./src/assets/img/history-intro-bg.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./src/assets/img/history-intro-bg-mobile.webp"
+              alt="Фоновое изображение"
+            />
+          </picture>
+        </div>
+        <div class="wrapper">
+          <div class="breadcrumbs">
+            <a href="/">Главная</a>
+            <span>О компании</span>
+          </div>
+          <div class="history-intro__content">
+            <div class="history-intro__logo">
+              <img src="./src/assets/img/logo-gradient.svg" alt="Логотип" />
+            </div>
+            <h1 class="history-intro__title">наша история</h1>
+          </div>
+        </div>
+      </section>
+      <div class="carousel carousel--white">
+        <div class="carousel__wrapper">
+          <div class="carousel__item--small">От идеи к вооплощению</div>
+          <div class="carousel__item--small">Дерзость</div>
+          <div class="carousel__item--small">смелость</div>
+          <div class="carousel__item--small">модерн</div>
+          <div class="carousel__item--small">урбан</div>
+          <div class="carousel__item--small">драйв</div>
+          <div class="carousel__item--small">провокация</div>
+          <div class="carousel__item--small">энергия</div>
+        </div>
+        <div class="carousel__wrapper">
+          <div class="carousel__item--small">От идеи к вооплощению</div>
+          <div class="carousel__item--small">Дерзость</div>
+          <div class="carousel__item--small">смелость</div>
+          <div class="carousel__item--small">модерн</div>
+          <div class="carousel__item--small">урбан</div>
+          <div class="carousel__item--small">драйв</div>
+          <div class="carousel__item--small">провокация</div>
+          <div class="carousel__item--small">энергия</div>
+        </div>
+        <div class="carousel__wrapper">
+          <div class="carousel__item--small">От идеи к вооплощению</div>
+          <div class="carousel__item--small">Дерзость</div>
+          <div class="carousel__item--small">смелость</div>
+          <div class="carousel__item--small">модерн</div>
+          <div class="carousel__item--small">урбан</div>
+          <div class="carousel__item--small">драйв</div>
+          <div class="carousel__item--small">провокация</div>
+          <div class="carousel__item--small">энергия</div>
+        </div>
+      </div>
+      <section class="path section">
+        <div class="wrapper">
+          <div class="path__container">
+            <div class="path__top">
+              <h2 class="path__title">История бренда</h2>
+              <div class="path__subtitle">
+                Каждый этап развития бренда SCANDALIS сопровождался тщательным
+                планированием и стремлением к совершенству, что позволило,
+                бренду уверенно двигаться вперёд и завоёвывать доверие
+                покупателей.
+              </div>
+            </div>
+            <div class="path__main">
+              <div class="path__block path__block--left">
+                <div class="path__item">
+                  <div class="path__image">
+                    <img src="./src/assets/img/path-image-1.webp" alt="2020" />
+                  </div>
+                  <div class="path__text">
+                    <div class="path__date">2020</div>
+                    <div class="path__text">
+                      в 2020 году на российском рынке появился новый бренд
+                      SCANDALIS. Это был старт смелого, амбициозного проекта.
+                    </div>
+                  </div>
+                </div>
+                <div class="path__item">
+                  <div class="path__image">
+                    <img src="./src/assets/img/path-image-3.webp" alt="2022" />
+                  </div>
+                  <div class="path__text">
+                    <div class="path__date">2022</div>
+                    <div class="path__text">
+                      В апреле компания расширила своё присутствие в Москве,
+                      открыв корнер в престижном торгово‑развлекательном
+                      комплексе TREND ISLAND. Именно этот шаг способствовал
+                      значительному росту узнаваемости бренда среди московской
+                      аудитории и укрепил позиции SCANDALIS на рынке.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="path__progress">
+                <div class="path__progress-line"></div>
+              </div>
+              <div class="path__block path__block--right">
+                <div class="path__item">
+                  <div class="path__image">
+                    <img src="./src/assets/img/path-image-2.webp" alt="2021" />
+                  </div>
+                  <div class="path__text">
+                    <div class="path__date">2021</div>
+                    <div class="path__text">
+                      Ровно через год после открытия был открыт первый фирменный
+                      корнер в одном из самых крупных торговых центров москвы -
+                      «МЕГА Тёплый Стан» underline. Это стало важным событием
+                      и позволило занять место на столичном рынке.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="path__item">
+                  <div class="path__image">
+                    <img src="./src/assets/img/path-image-4.webp" alt="2024" />
+                  </div>
+                  <div class="path__text">
+                    <div class="path__date">2024</div>
+                    <div class="path__text">
+                      2024 принёс новые достижения. Был открыт первый фирменный
+                      магазин в ростове-на-дону. также мы Совершили релокацию
+                      корнера в trend island. Расширили торговые площади
+                      и создали комфортную среду для покупателей.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collections">
+        <h2 class="collections__title">collections</h2>
+        <div class="collections__subtitle">
+          Каждая коллекция бренда — это манифест независимости и смелости быть
+          собой.
+        </div>
+        <div class="collections__swiper">
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-1.webp"
+                  alt="Скандальная классика"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">Скандальная классика</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-2.webp"
+                  alt="rose"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">rose</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-3.webp"
+                  alt="Poker"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">Poker</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-4.webp"
+                  alt="Classic"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">Classic</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-1.webp"
+                  alt="Скандальная классика"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">Скандальная классика</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-2.webp"
+                  alt="rose"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">rose</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-3.webp"
+                  alt="Poker"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">Poker</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+            <a href="#" class="swiper-slide collections__item">
+              <div class="collections__image">
+                <img
+                  src="./src/assets/img/collections-image-4.webp"
+                  alt="Classic"
+                />
+                <div class="collections__stickers">
+                  <div class="sticker">new collection</div>
+                </div>
+              </div>
+              <div class="collections__name">Classic</div>
+              <span class="collections__link">Перейти в коллекцию</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">контакты и магазины</h2>
+        <div class="contacts__container">
+          <div class="contacts__top">
+            <div class="contacts__top-left">
+              <button class="contacts__dropbutton">Москва</button>
+              <div class="contacts__droplist">
+                <button
+                  class="contacts__droplist-element active"
+                  data-map-target="moscow"
+                >
+                  Москва
+                </button>
+                <button
+                  class="contacts__droplist-element"
+                  data-map-target="rostov"
+                >
+                  Ростов-на-Дону
+                </button>
+                <button
+                  class="contacts__droplist-element"
+                  data-map-target="ekb"
+                >
+                  Екатеринбург
+                </button>
+              </div>
+            </div>
+            <div class="contacts__top-right">
+              <a href="tel:+79934522612">+7 993 452-26-12</a>
+              <a href="mailto:SCANDALIS.WEAR@MAIL.RU">SCANDALIS.WEAR@MAIL.RU</a>
+            </div>
+          </div>
+          <div class="contacts__main">
+            <div class="contacts__buttons"></div>
+            <div
+              class="contacts__map"
+              data-map-config="moscow"
+              data-config-url="./mapConfig.json"
+            >
+              <div id="marker-template" style="display: none">
+                <div class="map-marker">
+                  <img class="marker-icon" src="" alt="Метка на карте" />
+                  <div class="marker-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__bg">
+          <picture>
+            <source
+              srcset="./src/assets/img/footer-bg.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./src/assets/img/footer-bg-mobile.webp"
+              alt="Фоновое изображение"
+            />
+          </picture>
+        </div>
+        <div class="wrapper">
+          <div class="footer__container">
+            <div class="footer__left">
+              <div class="footer__block">
+                <div class="footer__head">Покупателям</div>
+                <ul class="footer__list">
+                  <li><a href="">Сертификат</a></li>
+                  <li><a href="">Доставка</a></li>
+                  <li><a href="">Оплата</a></li>
+                  <li><a href="">Обмен и возврат</a></li>
+                </ul>
+              </div>
+              <div class="footer__block">
+                <div class="footer__head">О бренде</div>
+                <ul class="footer__list">
+                  <li><a href="">История бренда</a></li>
+                  <li><a href="">О компании</a></li>
+                  <li><a href="">блог</a></li>
+                  <li><a href="">Карьера</a></li>
+                  <li><a href="">Контакты и магазины</a></li>
+                </ul>
+              </div>
+              <div class="footer__info">
+                <a href="" class="footer__logo">
+                  <img src="./src/assets/img/white-logo.svg" alt="Логотип" />
+                </a>
+                <div class="footer__list">
+                  <ul class="footer__legal">
+                    <li>ИП Капаев Каплангирей Иссаевич</li>
+                    <li>ИНН: 090102545226</li>
+                    <li>ОГРН: 319619600152234</li>
+                    <li>
+                      <a href="" target="_blank">Политика конфиденциальности</a>
+                    </li>
+                    <li><a href="" target="_blank">Договор оферты</a></li>
+                  </ul>
+                  <p>©2025. Все права защищены</p>
+                  <a
+                    href="https://victoryagency.ru/services/digital/"
+                    target="_blank"
+                    >Сайт разработан VICTORY group</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="footer__right">
+              <div class="footer__block">
+                <div class="footer__head">Контакты</div>
+                <a href="tel:+79934522612" class="footer__tel"
+                  >+7 993 452-26-12</a
+                >
+                <div class="footer__socials">
+                  <a href="" class="footer__icon tg"></a>
+                  <a href="" class="footer__icon wa"></a>
+                  <a href="" class="footer__icon vk"></a>
+                  <a href="" class="footer__icon email"></a>
+                </div>
+              </div>
+              <div class="footer__block footer__block--subscribe">
+                <div class="footer__head">Подписаться на новости scandalis</div>
+                <div class="footer__send">
+                  <p>
+                    Получайте эксклюзивные новости о запуске коллекции,
+                    персонализированные советы и последние новости бренда.
+                  </p>
+                  <form action="" class="footer__form">
+                    <div class="footer__flex">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Электронная почта"
+                        class="footer__input"
+                      />
+                      <button type="submit" class="button button--border">
+                        Подписаться
+                      </button>
+                    </div>
+                    <label class="form__policy">
+                      <input type="checkbox" name="policy" />
+                      <span class="policy-decor"></span>
+                      <p>
+                        Я даю своё согласие на получение email-рассылки,
+                        <a href="" target="_blank"
+                          >обработку персональных данных</a
+                        >
+                        и принимаю условия
+                        <a href="" target="_blank"
+                          >политики конфиденциальности.</a
+                        >
+                      </p>
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <div class="history__bg">
+          <picture>
+            <source
+              srcset="./src/assets/img/history-bg.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./src/assets/img/history-bg-mobile.webp"
+              alt="История бренда"
+            />
+          </picture>
+        </div>
+        <div class="wrapper">
+          <div class="history__container">
+            <div class="history__title">История бренда</div>
+            <div class="history__subtitle">
+              Узнайте подробнее о развитии бренда SCANDALIS.
+            </div>
+            <a href="#" class="history__link">Перейти</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="stories-modal">
+      <button class="stories-modal__close"></button>
+      <div class="stories-modal__container">
+        <div class="swiper-wrapper"></div>
+        <button class="stories-modal__prev"></button>
+        <button class="stories-modal__next"></button>
+      </div>
+      <div class="stories-modal__preloader"></div>
+      <div class="stories-modal__fade"></div>
+    </div>
+
+    <script type="module" src="./src/assets/js/main.js"></script>
+  </body>
+</html>

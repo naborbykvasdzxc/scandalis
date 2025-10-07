@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+
+    &__link {
+        width: 32rem;
+        height: 24rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-bottom: 1rem solid var(--grey-200, #E6E6E6);
+        transition: background-color var(--transition);
+        @include bodyCups;
+
+        &.current {
+            background-color: var(--grey-50, #F8F8F8);
+            border-bottom: 1rem solid var(--black, #020202);
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                background-color: var(--grey-50, #F8F8F8);
+            }
+        }
+    }
+
+    &__prev,
+    &__next {
+        flex: 0 0 auto;
+        margin-inline: 6rem;
+        @include iconMask("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.19922 4.80005L16.7992 12.0001L7.19922 19.2' stroke='%23020202'/%3E%3C/svg%3E%0A", 24rem);
+    }
+
+    &__prev {
+        rotate: 180deg;
+    }
+}

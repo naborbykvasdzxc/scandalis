@@ -1,0 +1,67 @@
+.dot {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+
+    li {
+        @include body9;
+        display: flex;
+        align-items: flex-start;
+        gap: 15rem;
+
+        &::before {
+            content: '';
+            width: 8rem;
+            height: 8rem;
+            background-color: var(--black);
+            margin-top: 5rem;
+            flex: 0 0 auto;
+        }
+    }
+}
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"]
+ {
+    text-transform: uppercase;
+    @include bigTextCupsSB;
+    border-bottom: 1rem solid var(--grey-200, #E6E6E6);
+    padding: 15rem 20rem;
+
+    &::-webkit-input-placeholder {
+        text-transform: uppercase;
+        color: var(--grey-300, #BCBCBC);
+    }
+
+    &::-moz-placeholder {
+        text-transform: uppercase;
+        color: var(--grey-300, #BCBCBC);
+    }
+
+    &:-ms-input-placeholder {
+        text-transform: uppercase;
+        color: var(--grey-300, #BCBCBC);
+    }
+
+    &:-moz-placeholder {
+        text-transform: uppercase;
+        color: var(--grey-300, #BCBCBC);
+    }
+
+
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all 5000s ease-in-out 0s;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+}

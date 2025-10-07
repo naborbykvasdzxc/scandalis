@@ -1,0 +1,55 @@
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    // gap: 30rem;
+    padding: 43rem 0;
+    background-color: var(--black);
+    color: var(--white);
+
+    &--white {
+        color: var(--black);
+        background-color: var(--white);
+        padding: 20rem 0;
+        // gap: 60rem;
+
+        .carousel__wrapper {
+            gap: 60rem;
+            padding-inline: 30rem;
+            animation: carousel 15s linear infinite;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 30rem;
+        @include h2;
+        animation: carousel 10s linear infinite;
+        padding-inline: 15rem;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+        width: fit-content;
+        white-space: nowrap;
+
+        &--small {
+            @include bigTextCupsSB;
+            flex: 0 0 auto;
+            width: fit-content;
+            white-space: nowrap;
+        }
+    }
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

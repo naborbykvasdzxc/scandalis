@@ -1,0 +1,114 @@
+/**
+  Нормализация блочной модели
+ */
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ /**
+     Убираем внутренние отступы слева тегам списков,
+     у которых есть атрибут class
+    */
+ ul,
+ ol {
+   padding-left: 0;
+   list-style: none;
+ }
+ 
+ /**
+     Убираем внешние отступы body и двум другим тегам,
+     у которых есть атрибут class
+    */
+ body,
+ :where(blockquote, figure):where([class]) {
+   margin: 0;
+ }
+ 
+ /**
+     Убираем внешние отступы вертикали нужным тегам,
+     у которых есть атрибут class
+    */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ ul,
+ ol,
+ dl {
+   margin-block: 0;
+   font-size: inherit;
+   font-weight: inherit;
+ }
+ 
+ :where(dd[class]) {
+   margin-left: 0;
+ }
+ 
+ :where(fieldset[class]) {
+   margin-left: 0;
+   padding: 0;
+   border: none;
+ }
+ 
+ 
+ :where(ul[class]) {
+   list-style: none;
+ }
+ 
+ 
+ p {
+   margin-block: 0;
+ }
+ 
+ 
+ img {
+   display: block;
+   max-width: 100%;
+ }
+ 
+ 
+ input,
+ textarea,
+ select,
+ button {
+   font: inherit;
+   border: none;
+   outline: none;
+   background-color: inherit;
+ }
+ 
+ a,
+ button {
+   color: inherit;
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
+ 
+ @media (prefers-reduced-motion: reduce) {
+   * {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+   }
+ }
+ 
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+ 
+ input[type=number] {
+   -moz-appearance: textfield;
+   /* Firefox */
+   appearance: textfield;
+ }

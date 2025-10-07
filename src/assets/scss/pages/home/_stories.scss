@@ -1,0 +1,224 @@
+.stories {
+    padding: 60rem 0;
+
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 40rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10rem;
+        cursor: pointer;
+        transition: opacity var(--transition);
+
+        &.seen {
+            opacity: 0.6;
+            
+            .stories__image {
+                border-color: var(--grey-300);
+                filter: grayscale(100%);
+            }
+        }
+    }
+
+    &__image {
+        width: 110rem;
+        height: 110rem;
+        border-radius: 50%;
+        border: 1rem solid var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+
+        &-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__name {
+        @include button;
+        text-align: center;
+        width: 194rem;
+    }
+}
+
+
+.stories-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    padding: 30rem;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        display: flex;
+    }
+
+    &__fade {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 2;
+        top: 20rem;
+        right: 20rem;
+        width: 40rem;
+        height: 40rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            color: var(--white);
+            @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cpath d='M11.7505 11.7505L28.2496 28.2496M28.2496 11.7505L11.7505 28.2496' stroke='%23F8F8F8' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 40rem)
+        }
+    }
+
+    &__container {
+        max-width: 537rem;
+        height: 956rem;
+        max-height: calc(100vh - 100rem);
+        margin: auto;
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        scale: 0.7;
+        transition: scale var(--transition) !important;
+        display: flex!important;
+        flex-direction: column;
+        padding: 20rem;
+
+        &__progress {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 2rem;
+            z-index: 10;
+            position: relative;
+            overflow: hidden;
+
+            &-fill {
+                height: 100%;
+                width: 0%;
+                background-color: var(--white);
+                border-radius: 2rem;
+                transition: width 0.1s ease;
+            }
+
+            &.active {
+                .stories-modal__item__progress-fill {
+                    animation: progressFill 5s linear forwards;
+                }
+            }
+
+            &.completed {
+                .stories-modal__item__progress-fill {
+                    width: 100%;
+                }
+            }
+        }
+
+        >img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &.swiper-slide-active {
+            scale: 1;
+        }
+
+
+    }
+
+    &__content {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-grow: 1;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        @include bodyCups;
+        gap: 10rem;
+        color: var(--white);
+
+        img {
+            width: 60rem;
+            height: 60rem;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+    }
+
+    &__bottom {
+        margin-top: auto;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10rem;
+        padding-bottom: 20rem;
+        padding-inline: 20rem
+    }
+
+    &__name{
+        @include h4;
+    }
+
+    &__description{
+        @include bodyCups;
+        color: var(--grey-200);
+    }
+}
+
+@keyframes progressFill {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}

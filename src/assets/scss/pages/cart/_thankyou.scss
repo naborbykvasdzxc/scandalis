@@ -1,0 +1,102 @@
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    width: 880rem;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+
+        p{
+            @include bigTextCupsSB;
+        }
+    }
+
+    &__title {
+        @include h3;
+    }
+
+    &__tooltip {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+        align-items: flex-start;
+
+        p {
+            color: var(--grey-700);
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 30rem;
+    }
+
+    &__head {
+        @include h4;
+    }
+
+    &__info {
+        @include bodyCups;
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+
+        p {
+            display: flex;
+            flex-direction: column;
+
+            gap: 10rem;
+
+            span {
+                @include body9;
+                text-transform: none;
+                color: var(--grey-600);
+            }
+        }
+    }
+
+
+    &__nums {
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+        color: var(--grey-500);
+    }
+
+    &__row {
+        display: flex;
+        align-items: baseline;
+        gap: 20rem;
+    }
+
+    &__label, &__num {
+        flex: 0 0 auto;
+    }
+    
+    &__divider {
+        width: 100%;
+        height: 1rem;
+        border-bottom: 1rem dashed var(--grey-200);
+    }
+
+    &__total {
+        @include bodyCupsBold;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__help {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        color: var(--grey-700);
+        a{
+            @include h3;
+            color: var(--black);
+        }
+    }
+}

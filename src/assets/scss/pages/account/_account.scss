@@ -1,0 +1,162 @@
+.login {
+    display: flex;
+    height: 1080rem;
+
+    &__left {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        padding-left: calc((100% - var(--container-width)) / 2);
+
+    }
+
+    &__image {
+        width: 938rem;
+        height: 100%;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        @include h3;
+        background: linear-gradient(91deg, #000 52.83%, #BFBFBF 76.8%, #000 93.21%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__links {
+        display: flex;
+        align-items: flex-start;
+        gap: 30rem;
+        @include bodyCupsBold;
+    }
+
+    &__link {
+        padding: 3rem 0;
+        border-bottom: 1rem solid var(--grey-300);
+
+        &.active {
+            border-bottom: 2rem solid var(--black);
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                border-bottom: 2rem solid var(--black);
+            }
+        }
+    }
+
+    &__signup {
+        display: flex;
+        flex-direction: column;
+        gap: 60rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 551rem;
+        gap: 20rem;
+
+        .login__label {
+            width: 100%;
+            margin-bottom: 10rem;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        a {
+            margin-bottom: 20rem;
+        }
+    }
+
+    &__forgot {
+        border-bottom: 1rem solid currentColor;
+        @include smallTextReg;
+        padding: 3rem 0;
+        width: fit-content;
+        color: var(--grey-500);
+    }
+
+
+    &__agree {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 10rem;
+        position: relative;
+        cursor: pointer;
+        color: var(--grey-300);
+
+        input {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+
+            &:checked {
+                +.policy-decor {
+                    border-color: var(--black);
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        a {
+            color: var(--black);
+        }
+
+        .policy-decor {
+            width: 24rem;
+            height: 24rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1rem solid var(--grey-300);
+            transition: border-color var(--transition);
+            flex: 0 0 auto;
+
+            &::before {
+                content: '';
+                width: 8rem;
+                height: 8rem;
+                background-color: var(--black);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__f20{
+        display: flex;
+        flex-direction: column;
+        gap: 20rem;
+    }
+
+    &__subtitle{
+        color: var(--grey-600);
+        max-width: 551rem;
+    }
+}
+
