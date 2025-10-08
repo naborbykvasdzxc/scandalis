@@ -688,6 +688,7 @@
         display: flex;
         align-items: center;
         gap: 5rem;
+
         span {
             color: var(--error);
         }
@@ -696,5 +697,31 @@
     &__buttons {
         display: flex;
         gap: 30rem;
+    }
+
+    &__empty {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 134rem;
+        gap: 40rem;
+
+        &-head {
+            display: flex;
+            background: linear-gradient(93deg, #000 -16.42%, #BFBFBF 37.3%, #000 74.06%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include bodyCupsBold;
+            flex-direction: column;
+            gap: 20rem;
+            align-items: center;
+            &::before {
+                content: '';
+                background: linear-gradient(93deg, #000 -16.42%, #BFBFBF 37.3%, #000 74.06%);
+                @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cpath d='M14.9987 14.9997H15.0154M24.9987 14.9997L14.9987 24.9997M24.9987 24.9997H25.0154M3.33203 14.9997C4.65811 14.9997 5.92988 15.5265 6.86756 16.4641C7.80525 17.4018 8.33203 18.6736 8.33203 19.9997C8.33203 21.3258 7.80525 22.5975 6.86756 23.5352C5.92988 24.4729 4.65811 24.9997 3.33203 24.9997V28.333C3.33203 29.2171 3.68322 30.0649 4.30834 30.69C4.93346 31.3152 5.78131 31.6663 6.66536 31.6663H33.332C34.2161 31.6663 35.0639 31.3152 35.6891 30.69C36.3142 30.0649 36.6654 29.2171 36.6654 28.333V24.9997C35.3393 24.9997 34.0675 24.4729 33.1298 23.5352C32.1921 22.5975 31.6654 21.3258 31.6654 19.9997C31.6654 18.6736 32.1921 17.4018 33.1298 16.4641C34.0675 15.5265 35.3393 14.9997 36.6654 14.9997V11.6663C36.6654 10.7823 36.3142 9.93444 35.6891 9.30932C35.0639 8.6842 34.2161 8.33301 33.332 8.33301H6.66536C5.78131 8.33301 4.93346 8.6842 4.30834 9.30932C3.68322 9.93444 3.33203 10.7823 3.33203 11.6663V14.9997Z' stroke='%23020202' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 40rem)
+            }
+        }
     }
 }
