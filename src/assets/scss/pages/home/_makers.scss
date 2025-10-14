@@ -4,6 +4,13 @@
     position: relative;
     overflow: hidden;
 
+    @include mobile {
+        gap: 40rem;
+        padding-block: 40rem;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__content {
         padding-top: 178rem;
         padding-bottom: 239rem;
@@ -13,6 +20,15 @@
         text-align: center;
         position: relative;
         z-index: 2;
+
+        @include tablet {
+            padding-top: 100rem;
+            padding-bottom: 100rem;
+        }
+
+        @include mobile {
+            padding-block: 0;
+        }
     }
 
     &__head {
@@ -20,6 +36,15 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 40rem;
+
+        @include tablet {
+            margin-bottom: 20rem;
+        }
+
+        @include mobile {
+            margin-bottom: 16rem;
+        }
+
     }
 
     &__title {
@@ -28,16 +53,39 @@
         line-height: 110%;
         letter-spacing: 12.8rem;
         text-transform: uppercase;
+
+        @include tablet {
+            font-size: 42rem;
+            letter-spacing: 6.4rem;
+        }
+
+        @include mobile {
+            font-size: 24rem;
+            letter-spacing: 4.8rem;
+            width: 320rem;
+            margin-inline: auto;
+        }
     }
 
     &__text {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 583rem;
+        max-width: 600rem;
         color: var(--grey-500);
         gap: 116rem;
         margin-bottom: 93rem;
+        @include bodyCups;
+
+        @include tablet {
+            margin-bottom: 50rem;
+            gap: 60rem;
+        }
+
+        @include mobile {
+            gap: 40rem;
+            margin-bottom: 16rem;
+        }
     }
 
     &__link {
@@ -52,11 +100,42 @@
         height: 884rem;
         top: 0;
         left: 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+        }
+
+        @include tablet {
+            width: 300rem;
+            height: 100%;
+        }
+
+        @include mobile {
+            position: static;
+            width: 189rem;
+            height: 266rem;
+            margin-inline: auto;
+        }
+    }
+
+    &__logo {
+        width: 209rem;
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+
+        @include tablet {
+            width: 150rem;
+        }
+
+        @include mobile {
+            width: 94rem;
         }
     }
 
@@ -69,20 +148,80 @@
         width: 542rem;
         height: 367rem;
 
+        @include tablet {
+            width: 300rem;
+            height: 250rem;
+            bottom: 50rem;
+        }
+
+        @include mobile{
+            width: 100%;
+            gap: 8rem;
+        }
+
+
+
         &-wrapper {
             width: 261rem;
             height: 301rem;
+            overflow: hidden;
+            position: relative;
+
+            @include mobile {
+                width: 157rem;
+                height: 182rem;
+            }
+
+            @include tablet {
+                width: 150rem;
+                height: 170rem;
+            }
 
             img {
-                width: 100%;
-                height: 100%;
+                width: 101%;
+                height: 110%;
                 object-fit: cover;
-
+                position: absolute;
+                top: 0;
+                left: 0;
             }
 
             &:nth-child(2) {
                 align-self: flex-end;
+
+                @include mobile {
+                    width: 195rem;
+                    height: 212rem;
+                }
             }
+        }
+
+        @include mobile {
+            position: static;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        width: 1316rem;
+        top: 178rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include tablet {
+            width: 700rem;
+            top: 100rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @include mobile {
+            width: 482rem;
+            top: -17rem;
         }
     }
 }

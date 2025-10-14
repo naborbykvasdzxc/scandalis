@@ -385,7 +385,7 @@
               media="(min-width: 768px)"
             />
             <img
-              src="./src/assets/img/about-bg-mobile.webp"
+              src="./src/assets/img/about-intro-mobile.webp"
               alt="Фоновое изображение"
             />
           </picture>
@@ -444,7 +444,7 @@
             </div>
             <div class="brand__grid">
               <div class="brand__item brand__item--small">
-                <div class="brand__image">
+                <div class="brand__image" data-image-animate>
                   <div class="brand__image-static">
                     <img
                       src="./src/assets/img/brand-image-1-static.webp"
@@ -466,7 +466,7 @@
                 </div>
               </div>
               <div class="brand__item brand__item--big">
-                <div class="brand__image">
+                <div class="brand__image" data-image-animate>
                   <div class="brand__image-static">
                     <img
                       src="./src/assets/img/brand-image-2-static.webp"
@@ -489,7 +489,7 @@
                 </div>
               </div>
               <div class="brand__item brand__item--big">
-                <div class="brand__image">
+                <div class="brand__image" data-image-animate>
                   <div class="brand__image-static">
                     <img
                       src="./src/assets/img/brand-image-3-static.webp"
@@ -515,7 +515,7 @@
         </div>
       </section>
       <section class="challenge">
-        <h2 class="challenge__title">
+        <h2 class="challenge__title" data-split-recolor>
           Мы не относимся к моде серьезно, а воспринимаем ее как CHALLENGE.
         </h2>
         <div class="challenge__video">
@@ -570,45 +570,47 @@
           поступков.
         </div>
         <div class="projects__container">
+          <button class="nav-btn nav-btn--prev projects__prev"></button>
+          <button class="nav-btn nav-btn--next projects__next"></button>
           <div class="projects__swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-1.webp"
                   alt="Изображение - 1"
                 />
               </div>
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-2.webp"
                   alt="Изображение - 2"
                 />
               </div>
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-3.webp"
                   alt="Изображение - 3"
                 />
               </div>
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-4.webp"
                   alt="Изображение - 4"
                 />
               </div>
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-5.webp"
                   alt="Изображение - 5"
                 />
               </div>
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-6.webp"
                   alt="Изображение - 6"
                 />
               </div>
-              <div class="swiper-slide projects__slide">
+              <div class="swiper-slide projects__slide" data-image-animate>
                 <img
                   src="./src/assets/img/projects-7.webp"
                   alt="Изображение - 7"
@@ -627,7 +629,7 @@
         <div class="collections__swiper">
           <div class="swiper-wrapper">
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-1.webp"
                   alt="Скандальная классика"
@@ -639,8 +641,8 @@
               <div class="collections__name">Скандальная классика</div>
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
-            <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+            <a href="#" class="swiper-slide collections__item" >
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-2.webp"
                   alt="rose"
@@ -653,7 +655,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-3.webp"
                   alt="Poker"
@@ -666,7 +668,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-4.webp"
                   alt="Classic"
@@ -679,7 +681,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-1.webp"
                   alt="Скандальная классика"
@@ -692,7 +694,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-2.webp"
                   alt="rose"
@@ -705,7 +707,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-3.webp"
                   alt="Poker"
@@ -718,7 +720,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate  >
                 <img
                   src="./src/assets/img/collections-image-4.webp"
                   alt="Classic"

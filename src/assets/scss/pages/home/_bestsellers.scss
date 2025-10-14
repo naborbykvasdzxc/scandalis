@@ -1,6 +1,14 @@
 .bestsellers {
     padding: 100rem 0;
 
+    @include tablet{
+        padding: 60rem 0;
+    }
+
+    @include mobile{
+        padding: 40rem 0;
+    }
+
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -15,11 +23,20 @@
     &__title {
         @include h2;
         margin-bottom: 20rem;
+
+        @include mobile{
+            margin-bottom: 12rem;
+        }
     }
 
     &__subtitle {
         @include bodyCups;
         margin-bottom: 60rem;
+        text-align: center;
+
+        @include mobile{
+            margin-bottom: 32rem;
+        }
     }
 
     &__next,
@@ -40,6 +57,10 @@
         transform: translateY(-50%);
         transition: opacity var(--transition);
 
+        @include mobile{
+            display: none;
+        }
+
         &.swiper-button-disabled {
             opacity: 0;
         }
@@ -52,6 +73,10 @@
     &__next {
         right: -19rem;
 
+        @include tablet{
+            right: 0;;
+        }
+
         &::before {
             content: '';
             @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M8.5 5.5L15.5 12.5L8.5 19.5' stroke='%237E7E7E' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 100%);
@@ -60,6 +85,10 @@
 
     &__prev {
         left: -19rem;
+
+        @include tablet{
+            left: 0;
+        }
 
         &::before {
             content: '';

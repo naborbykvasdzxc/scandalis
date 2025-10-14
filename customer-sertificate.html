@@ -385,6 +385,10 @@
               <span>Возврат и обмен</span>
             </div>
             <h1 class="customer__title">Покупателям</h1>
+            <div class="customer__mobile-dropdown" data-mobile-target="customer">
+              <!-- the_title() в кнопку -->
+              <button class="customer__mobile-button" >Обмен и возврат</button>
+            </div>
             <div class="customer__links">
               <a href="#" class="customer__link active">Сертификаты</a>
               <a href="#" class="customer__link">Доставка </a>
@@ -405,9 +409,7 @@
             </div>
             <div class="customer__right">
               <div class="sertificate">
-                <div class="sertificate__image">
-                  <img src="./src/assets/img/sertificate-image.webp" alt="Сертификат">
-                </div>
+
                 <div class="sertificate__top">
                   <p>
                     Подарочный сертификат можно купить в любом магазине
@@ -423,7 +425,7 @@
                     <span>Для кого:</span>
                     <div class="sertificate__flex">
                       <label class="sertificate__target">
-                        <input type="radio" name="target" value="В подарок" />
+                        <input type="radio" name="target" value="present" />
                         В подарок
                       </label>
                       <label class="sertificate__target">
@@ -431,12 +433,16 @@
                           type="radio"
                           name="target"
                           checked
-                          value="Себе"
+                          value="self"
                         />
                         Себе
                       </label>
                     </div>
-                    <button type="button" class="sertificate__tooltip">
+                    <button
+                      type="button"
+                      class="sertificate__tooltip"
+                      data-modal="sertificate"
+                    >
                       Как применить сертификат
                     </button>
                   </div>
@@ -448,36 +454,36 @@
                           type="radio"
                           name="nominal"
                           checked
-                          value="1000"
+                          value="3 000 ₽"
                         />
                         3 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="2000" />
+                        <input type="radio" name="nominal" value="5 000 ₽" />
                         5 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="10000" />
+                        <input type="radio" name="nominal" value="10 000 ₽" />
                         10 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="15000" />
+                        <input type="radio" name="nominal" value="15 000 ₽" />
                         15 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="20000" />
+                        <input type="radio" name="nominal" value="20 000 ₽" />
                         20 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="25000" />
+                        <input type="radio" name="nominal" value="25 000 ₽" />
                         25 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="30000" />
+                        <input type="radio" name="nominal" value="30 000 ₽" />
                         30 000 ₽
                       </label>
                       <label class="sertificate__nominal">
-                        <input type="radio" name="nominal" value="Другой" />
+                        <input type="radio" name="nominal" value="custom" />
                         Другой
                       </label>
                     </div>
@@ -486,8 +492,8 @@
                       data-seftificate-nominal
                     >
                       <input
-                        type="text"
-                        name="nominal"
+                        type="number"
+                        name="nominal-custom"
                         placeholder="Выберите номинал"
                       />
                       <span>Введите любую сумму от 1 000 ₽ до 200 000 ₽</span>
@@ -539,6 +545,12 @@
                     </button>
                   </div>
                 </form>
+                <div class="sertificate__image">
+                  <img
+                    src="./src/assets/img/sertificate-image.webp"
+                    alt="Сертификат"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -692,6 +704,49 @@
       </div>
       <div class="stories-modal__preloader"></div>
       <div class="stories-modal__fade"></div>
+    </div>
+
+    <div class="modal pp-unanimate" data-modal-id="sertificate">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body">
+        <button class="modal__close" data-modal-close></button>
+        <div class="modal__sertificate">
+          <div class="modal__title">правила использования сертификата</div>
+          <div class="modal__content">
+            <p>Сертификат действует 5 лет с момента покупки.</p>
+            <p>Сертификатом можно оплатить любые покупки на сайте, Scandalis</p>
+            <p>
+              Чтобы воспользоваться сертификатом онлайн, перейдите в корзину и
+              введите код сертификата в поле «промокод/сертификат». Нажмите на
+              кнопку, чтобы применить сертификат к заказу.
+            </p>
+            <ul>
+              <li>
+                Если сумма покупки больше номинала сертификата, можно доплатить
+                удобным для вас способом (онлайн-оплата картой или другими
+                доступными методами).
+              </li>
+              <li>
+                Курьер не сможет принять оплату сертификатом, поэтому его
+                необходимо применить в корзине при оформлении заказа на сайте.
+              </li>
+              <li>
+                Доплата через системы рассрочки («Сплит», «Долями» и
+                аналогичные) невозможна.
+              </li>
+              <li>
+                В одном заказе можно применить не более трёх сертификатов.
+              </li>
+              <li>
+                Если номинал сертификата больше суммы покупки, остаток
+                сохраняется на сертификате и им можно воспользоваться повторно.
+              </li>
+            </ul>
+            <p>Если вы хотите вернуть сертификат или узнать остаток, обратитесь в службу поддержки SCANDALIS: по номеру телефона <a href="tel:+79934522612">+7 993 452-26-12</a> или по почте <a href="mailto:support@scandalis.ru">support@scandalis.ru</a></p>
+            <p>Более подробно о всех <a href="">правилах и условиях.</a></p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/assets/js/main.js"></script>

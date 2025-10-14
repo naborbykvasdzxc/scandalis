@@ -17,5 +17,13 @@
     --transition: 0.4s ease-in;
     --transition-2: 0.8s ease-out;
     --scroll-width: 8rem;
+
+    @include tablet {
+      --container-width: 1150rem;
+    }
+
+    @include mobile{
+      --container-width: 328rem;
+    }
   }
   

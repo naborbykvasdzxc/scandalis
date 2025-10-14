@@ -5,16 +5,31 @@
     max-width: 727rem;
     position: relative;
 
+    @include tablet {
+        max-width: 460rem;
+    }
+
+    @include mobile {
+        width: 100%;
+        gap: 24rem;
+    }
+
     &__image {
         position: absolute;
         top: 0;
         left: calc(100% + 40rem);
         width: 633rem;
         height: auto;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @include tablet {
+            left: calc(100% + 20rem);
+            width: 350rem;
         }
     }
 
@@ -22,6 +37,10 @@
         display: flex;
         flex-direction: column;
         gap: 20rem;
+
+        @include mobile {
+            gap: 16rem;
+        }
     }
 
     &__form {
@@ -30,11 +49,19 @@
         gap: 25rem;
         width: 426rem;
 
+        @include mobile {
+            width: 100%;
+        }
+
         &-top {
             display: flex;
             flex-direction: column;
             gap: 10rem;
             align-items: flex-start;
+
+            @include mobile {
+                gap: 8rem;
+            }
         }
     }
 
@@ -69,6 +96,10 @@
             visibility: hidden;
 
         }
+
+        @include mobile {
+            width: 160rem;
+        }
     }
 
     &__tooltip {
@@ -82,12 +113,26 @@
             content: '';
             @include iconMask("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 4L14 10L6 16' stroke='%23020202'/%3E%3C/svg%3E%0A", 24rem)
         }
+
+        @include mobile {
+            gap: 8rem;
+            padding: 8rem;
+
+            &::after {
+                width: 20rem;
+                height: 20rem;
+            }
+        }
     }
 
     &__container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10rem;
+
+        @include mobile {
+            gap: 8rem;
+        }
     }
 
     &__item {
@@ -132,6 +177,13 @@
             background-color: var(--black);
             color: var(--white);
         }
+
+        @include mobile {
+            width: 100%;
+
+            padding: 10rem 12rem;
+            text-align: center;
+        }
     }
 
     &__optional {
@@ -154,8 +206,9 @@
             @include smallTextReg;
             gap: 10rem;
             color: var(--grey-500);
-            p{
-                a{
+
+            p {
+                a {
                     color: var(--black);
                 }
             }
@@ -169,7 +222,7 @@
         margin-top: 15rem;
         color: var(--grey-500);
 
-        span{
+        span {
             @include smallTextReg;
         }
     }

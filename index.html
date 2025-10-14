@@ -58,7 +58,7 @@
       </div>
       <div class="header__main">
         <div class="wrapper">
-          <button class="header__menu" data-burger-button>Меню</button>
+          <button class="header__menu" data-modal="burger">Меню</button>
           <a href="/" class="header__logo">
             <img
               src="./src/assets/img/logo.svg"
@@ -110,8 +110,8 @@
           </div>
         </div>
       </div>
-      <div class="burger">
-        <div class="burger__fade" data-burger-button></div>
+      <div class="burger pp-unanimate" data-modal-id="burger">
+        <div class="burger__fade" data-modal-close></div>
         <div class="burger__body">
           <div class="burger__left">
             <div class="burger__top">
@@ -290,7 +290,7 @@
               <div class="search__head">bestsellers</div>
               <div class="search__grid">
                 <a href="#" class="product">
-                  <div class="product__image">
+                  <div class="product__image" data-image-animate>
                     <img
                       src="./src/assets/img/product-1.webp"
                       alt="Анорак на молнии"
@@ -310,7 +310,7 @@
                   </div>
                 </a>
                 <a href="#" class="product">
-                  <div class="product__image">
+                  <div class="product__image" data-image-animate>
                     <img
                       src="./src/assets/img/product-1.webp"
                       alt="Анорак на молнии"
@@ -330,7 +330,7 @@
                   </div>
                 </a>
                 <a href="#" class="product">
-                  <div class="product__image">
+                  <div class="product__image" data-image-animate>
                     <img
                       src="./src/assets/img/product-1.webp"
                       alt="Анорак на молнии"
@@ -350,7 +350,7 @@
                   </div>
                 </a>
                 <a href="#" class="product">
-                  <div class="product__image">
+                  <div class="product__image" data-image-animate>
                     <img
                       src="./src/assets/img/product-1.webp"
                       alt="Анорак на молнии"
@@ -400,7 +400,7 @@
                   media="(min-width: 768px)"
                 />
                 <img
-                  src="./src/assets/img/intro-image-hover-1-mobile.webp"
+                  src="./src/assets/img/intro-image-1-mobile.webp"
                   alt="Мужская коллекция"
                 />
               </picture>
@@ -429,7 +429,7 @@
                   media="(min-width: 768px)"
                 />
                 <img
-                  src="./src/assets/img/intro-image-hover-2-mobile.webp"
+                  src="./src/assets/img/intro-image-2-mobile.webp"
                   alt="Мужская коллекция"
                 />
               </picture>
@@ -524,6 +524,9 @@
       </div>
       <section class="makers">
         <div class="makers__content">
+          <div class="makers__decor">
+            <img src="./src/assets/img/makers-text.webp" alt="Декор" />
+          </div>
           <div class="makers__head">
             <div class="makers__logo">
               <img
@@ -531,31 +534,42 @@
                 alt="makers of the game"
               />
             </div>
-            <h2 class="makers__title">makers of the game</h2>
+            <h2 class="makers__title" data-split-text>makers of the game</h2>
           </div>
           <div class="makers__text">
-            <p>В свою игру мы объединяем людей и их сферы жизни</p>
-            <p>
-              Бренд несет в себе манифест свободы самовыражения, сочетание
-              урбанистической эстетики и культурного наследия.
+            <p data-split-text>
+              В свою игру мы объединяем людей <br class="br-mobile" />
+              и их сферы жизни
+            </p>
+            <p data-split-text>
+              Бренд несет в себе манифест свободы <br class="br-mobile" />
+              самовыражения, сочетание урбанистической эстетики
+              <br class="br-mobile" />
+              и культурного наследия.
             </p>
           </div>
           <a href="" class="makers__link">узнать подробнее</a>
         </div>
         <div class="makers__image">
-          <img src="./src/assets/img/makers-image-1.webp" alt="Гардероб" />
+          <img
+            src="./src/assets/img/makers-image-1.webp"
+            alt="Гардероб"
+            data-parallax-animate
+          />
         </div>
         <div class="makers__right">
           <div class="makers__right-wrapper">
             <img
               src="./src/assets/img/makers-image-2.webp"
               alt="Мужчина и женщина"
+              data-parallax-animate
             />
           </div>
           <div class="makers__right-wrapper">
             <img
               src="./src/assets/img/makers-image-3.webp"
               alt="Мужчина и женщина"
+              data-parallax-animate
             />
           </div>
         </div>
@@ -563,7 +577,6 @@
       <section class="video">
         <video
           src="./src/assets/video/video-1.mp4"
-          autoplay
           muted
           loop
           playsinline
@@ -578,7 +591,7 @@
         <div class="collections__swiper">
           <div class="swiper-wrapper">
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-1.webp"
                   alt="Скандальная классика"
@@ -591,7 +604,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-2.webp"
                   alt="rose"
@@ -604,7 +617,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-3.webp"
                   alt="Poker"
@@ -617,7 +630,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-4.webp"
                   alt="Classic"
@@ -630,7 +643,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-1.webp"
                   alt="Скандальная классика"
@@ -643,7 +656,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-2.webp"
                   alt="rose"
@@ -656,7 +669,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-3.webp"
                   alt="Poker"
@@ -669,7 +682,7 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
             <a href="#" class="swiper-slide collections__item">
-              <div class="collections__image">
+              <div class="collections__image" data-image-animate>
                 <img
                   src="./src/assets/img/collections-image-4.webp"
                   alt="Classic"
@@ -682,21 +695,14 @@
               <span class="collections__link">Перейти в коллекцию</span>
             </a>
           </div>
+          <button class="nav-btn nav-btn--prev collections__prev"></button>
+          <button class="nav-btn nav-btn--next collections__next"></button>
         </div>
       </section>
       <section class="latest">
         <div class="latest__bg">
           <div class="latest__bg-static">
-            <picture>
-              <source
-                srcset="./src/assets/img/latest-image-1.webp"
-                media="(min-width: 768px)"
-              />
-              <img
-                src="./src/assets/img/latest-image-1-mobile.webp"
-                alt="latest"
-              />
-            </picture>
+            <img src="./src/assets/img/latest-image-1.webp" alt="latest" />
           </div>
           <div class="latest__bg-hover">
             <picture>
@@ -705,15 +711,15 @@
                 media="(min-width: 768px)"
               />
               <img
-                src="./src/assets/img/latest-image-2-mobile.webp"
+                src="./src/assets/img/latest-image-mobile.webp"
                 alt="latest"
               />
             </picture>
           </div>
         </div>
         <div class="latest__content">
-          <h2 class="latest__title">покер</h2>
-          <div class="latest__subtitle">
+          <h2 class="latest__title" data-split-text>покер</h2>
+          <div class="latest__subtitle" data-split-text>
             Каждая вещь коллекции — это возможность создать образ, полный смысла
             и стиля, где классическая символика игральных карт встречается с
             современными тенденциями моды.
@@ -750,11 +756,12 @@
           </div>
           <div class="bestsellers__swiper">
             <div class="swiper-wrapper">
+              <!-- !!! ТУТ В ЦИКЛЕ НУЖНО ВЫВОДИТЬ --big --small --medium ПООЧЕРЕДНО !!! -->
               <a
                 href="#"
                 class="product swiper-slide product--bestsellers product--big"
               >
-                <div class="product__image">
+                <div class="product__image" data-image-animate>
                   <img
                     src="./src/assets/img/product-1.webp"
                     alt="Анорак на молнии"
@@ -777,7 +784,7 @@
                 href="#"
                 class="product swiper-slide product--bestsellers product--small"
               >
-                <div class="product__image">
+                <div class="product__image" data-image-animate>
                   <img
                     src="./src/assets/img/product-1.webp"
                     alt="Анорак на молнии"
@@ -800,7 +807,7 @@
                 href="#"
                 class="product swiper-slide product--bestsellers product--medium"
               >
-                <div class="product__image">
+                <div class="product__image" data-image-animate>
                   <img
                     src="./src/assets/img/product-1.webp"
                     alt="Анорак на молнии"
@@ -823,7 +830,7 @@
                 href="#"
                 class="product swiper-slide product--bestsellers product--big"
               >
-                <div class="product__image">
+                <div class="product__image" data-image-animate>
                   <img
                     src="./src/assets/img/product-1.webp"
                     alt="Анорак на молнии"
@@ -846,7 +853,7 @@
                 href="#"
                 class="product swiper-slide product--bestsellers product--small"
               >
-                <div class="product__image">
+                <div class="product__image" data-image-animate>
                   <img
                     src="./src/assets/img/product-1.webp"
                     alt="Анорак на молнии"
@@ -869,7 +876,7 @@
                 href="#"
                 class="product swiper-slide product--bestsellers product--medium"
               >
-                <div class="product__image">
+                <div class="product__image" data-image-animate>
                   <img
                     src="./src/assets/img/product-1.webp"
                     alt="Анорак на молнии"
@@ -912,16 +919,17 @@
         <div class="wrapper">
           <div class="footer__container">
             <div class="footer__left">
-              <div class="footer__block">
+              <div class="footer__block footer__block--mobile-3">
                 <div class="footer__head">Покупателям</div>
                 <ul class="footer__list">
                   <li><a href="">Сертификат</a></li>
                   <li><a href="">Доставка</a></li>
                   <li><a href="">Оплата</a></li>
                   <li><a href="">Обмен и возврат</a></li>
+                  <li><a href="">Бонусная программа</a></li>
                 </ul>
               </div>
-              <div class="footer__block">
+              <div class="footer__block footer__block--mobile-2">
                 <div class="footer__head">О бренде</div>
                 <ul class="footer__list">
                   <li><a href="">История бренда</a></li>
@@ -1010,15 +1018,23 @@
       <div class="history">
         <div class="history__bg">
           <picture>
-            <source srcset="./src/assets/img/history-bg.webp" media="(min-width: 768px)" />
-            <img src="./src/assets/img/history-bg-mobile.webp" alt="История бренда" />
+            <source
+              srcset="./src/assets/img/history-bg.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./src/assets/img/history-bg-mobile.webp"
+              alt="История бренда"
+            />
           </picture>
         </div>
         <div class="wrapper">
           <div class="history__container">
-              <div class="history__title">История бренда</div>
-              <div class="history__subtitle">Узнайте подробнее о развитии бренда SCANDALIS.</div>
-              <a href="#" class="history__link">Перейти</a>
+            <div class="history__title">История бренда</div>
+            <div class="history__subtitle">
+              Узнайте подробнее о развитии бренда SCANDALIS.
+            </div>
+            <a href="#" class="history__link">Перейти</a>
           </div>
         </div>
       </div>

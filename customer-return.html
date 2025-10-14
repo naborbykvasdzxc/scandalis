@@ -385,7 +385,12 @@
               <span>Возврат и обмен</span>
             </div>
             <h1 class="customer__title">Покупателям</h1>
-            <div class="customer__links">
+            <div class="customer__mobile-dropdown" data-mobile-target="customer">
+              <!-- the_title() в кнопку -->
+              <button class="customer__mobile-button" >Обмен и возврат</button>
+            </div>
+            <div class="customer__links" data-mobile-move="customer">
+              <!-- active на текущую страницу -->
               <a href="#" class="customer__link">Сертификаты</a>
               <a href="#" class="customer__link">Доставка </a>
               <a href="#" class="customer__link">Оплата</a>
@@ -467,7 +472,7 @@
                     >scandalis.wear@mail.ru</a
                   >
                 </div>
-                <div class="contacts__socials">
+                <div class="customer__socials">
                   <a
                     href=""
                     target="_blank"

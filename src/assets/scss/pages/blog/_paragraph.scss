@@ -8,6 +8,10 @@
     &__container {
         display: flex;
         gap: 40rem;
+
+        @include mobile{
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -16,12 +20,26 @@
         display: flex;
         gap: 50rem;
         flex-direction: column;
+
+        @include mobile{
+            gap: 12rem;
+        }
     }
 
     &__block {
         display: flex;
         flex-direction: column;
         gap: 20rem;
+
+        @include mobile{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            &:last-child{
+                align-items: center;
+            }
+        }
     }
 
     &__date {
@@ -41,6 +59,10 @@
         display: flex;
         align-items: center;
         gap: 20rem;
+
+        @include mobile{
+            gap: 12rem;
+        }
     }
 
     &__link {
@@ -79,9 +101,17 @@
         gap: 10rem;
         @include body9;
 
+        @include mobile{
+            gap: 8rem;
+        }
+
         h2 {
             margin-top: 5rem;
             @include bodyCups;
+
+            @include mobile{
+                margin-top: 8rem;
+            }
         }
 
         a,
@@ -91,6 +121,10 @@
             padding-block: 5rem;
             border-bottom: 2rem solid var(--black, #020202);
             margin-top: 15rem;
+
+            @include mobile{
+                margin-inline: auto
+            }
         }
     }
 }
@@ -99,9 +133,23 @@
     &__title {
         @include h2;
         margin-bottom: 60rem;
+
+        @include mobile{
+            margin-bottom: 24rem;
+        }
     }
 
     &__container {
         position: relative;
+    }
+
+    @include mobile{
+        &__swiper {
+            overflow: visible;
+        }
+        
+        .blog__item {
+            width: 260rem;
+        }
     }
 }

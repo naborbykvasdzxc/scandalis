@@ -7,29 +7,61 @@
         grid-template-columns: repeat(4, 1fr);
         border-top: 1rem solid var(--grey-800);
         border-bottom: 1rem solid var(--grey-800);
+
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
         padding: 150rem 40rem;
         background: rgba(255, 255, 255, 0.01);
         box-shadow: 0 0 51.8px 0 rgba(255, 255, 255, 0.03) inset;
+        transition: background-color var(--transition);
         display: flex;
         align-items: center;
         gap: 30rem;
         flex-direction: column;
         text-align: center;
 
+        @include tablet {
+            padding: 60rem 20rem;
+            gap: 20rem;
+        }
+
+        @include mobile{
+            padding: 24rem;
+            min-height: 168rem;
+        }
+
 
         &:not(:last-child) {
             border-right: 1rem solid var(--grey-800);
+
+            @include mobile{
+                border-right: none;
+                border-bottom: 1rem solid var(--grey-800);
+            }
+        }
+
+        @media (hover:hover) {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.05);
+
+                .advantages__head {
+                    text-shadow: 0 0 31rem rgba(255, 255, 255, 0.73);
+
+                }
+            }
         }
     }
 
-    &__head{
+    &__head {
         @include h3;
+        transition: text-shadow var(--transition);
     }
 
-    &__text{
+    &__text {
         @include bodyCups;
     }
 }

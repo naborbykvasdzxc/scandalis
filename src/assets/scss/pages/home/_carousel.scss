@@ -8,6 +8,14 @@
     background-color: var(--black);
     color: var(--white);
 
+    @include tablet{
+        padding: 25rem 0;
+    }
+
+    @include mobile{
+        padding: 18rem 0;
+    }
+
     &--white {
         color: var(--black);
         background-color: var(--white);
@@ -18,7 +26,13 @@
             gap: 60rem;
             padding-inline: 30rem;
             animation: carousel 15s linear infinite;
+
+            @include mobile{
+                gap: 16rem;
+                padding-inline: 8rem;
+            }
         }
+        
     }
 
     &__wrapper {
@@ -28,6 +42,11 @@
         @include h2;
         animation: carousel 10s linear infinite;
         padding-inline: 15rem;
+
+        @include mobile{
+            gap: 16rem;
+            padding-inline: 8rem;
+        }
     }
 
     &__item {

@@ -399,8 +399,10 @@
               <div class="promocode">
                 <div class="promocode__title">промокоды</div>
                 <div class="promocode__empty">
-                    <div class="promocode__empty-head">АКТИВНЫХ ПРОМОКОДОВ СЕЙЧАС НЕТ.</div>
-                    <button class="link">ДОБАВИТЬ ПРОМОКОД</button>
+                  <div class="promocode__empty-head">
+                    АКТИВНЫХ ПРОМОКОДОВ СЕЙЧАС НЕТ.
+                  </div>
+                  <button class="link" data-modal="add-promo">ДОБАВИТЬ ПРОМОКОД</button>
                 </div>
               </div>
             </div>
@@ -555,6 +557,29 @@
       </div>
       <div class="stories-modal__preloader"></div>
       <div class="stories-modal__fade"></div>
+    </div>
+
+    <div class="modal" data-modal-id="add-promo">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body">
+        <buton class="modal__close" data-modal-close=""></buton>
+        <div class="modal__center">
+          <div class="modal__title">Добавить промокод</div>
+          <label class="cart__promo">
+            <input type="text" placeholder="введите промокод" />
+          </label>
+          <div class="modal__status">
+            подарочный сертификат успешно применён.
+          </div>
+          <button
+            type="button"
+            class="button button--filled modal__button"
+            data-modal-close
+          >
+            Применить
+          </button>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/assets/js/main.js"></script>

@@ -409,7 +409,7 @@
                     и друзей.
                   </div>
                   <div class="account-sertificate__bottom">
-                    <button
+                    <button data-modal="add-sertificate"
                       class="button button--filled account-sertificate__button"
                     >
                       Добавить
@@ -610,6 +610,22 @@
       </div>
       <div class="stories-modal__preloader"></div>
       <div class="stories-modal__fade"></div>
+    </div>
+
+    <div class="modal" data-modal-id="add-sertificate">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body">
+        <buton class="modal__close" data-modal-close=""></buton>
+        <div class="modal__center">
+          <div class="modal__title">Добавить сертификат</div>
+          <div class="modal__text">Код указан в письме с сертификатом.</div>
+          <label class="cart__promo">
+            <input type="text" placeholder="Промокод / номер сертификата" />
+          </label>
+          <div class="modal__status">подарочный сертификат успешно применён.</div>
+          <button type="button" class="button button--filled modal__button" data-modal-close>Применить</button>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/assets/js/main.js"></script>

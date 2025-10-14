@@ -49,6 +49,9 @@ footer {
   display: none !important;
 }
 
+// Нормализация отображения OpenLayers карты на разных экранах
+
+
 .wrapper{
   max-width: min(var(--container-width), calc(100% - 30rem));
   width: 100%;
@@ -59,15 +62,55 @@ section{
   overflow: hidden;
 }
 
+.br-mobile{
+  display: none;
+  @include mobile{
+    display: block;
+  }
+}
+
+img{
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.split-lines{
+  overflow: hidden;
+}
+
+[data-image-animate] img{
+  transform-origin: top;
+}
+
 .section{
   padding-block: 100rem;
   &--breadcrumbs{
     padding-top: 40rem;
   }
+
+  @include tablet {
+    padding-block: 60rem;
+    &--breadcrumbs{
+      padding-top: 30rem;
+    }
+  }
+
+  @include mobile {
+    padding-block: 40rem;
+    &--breadcrumbs{
+      padding-top: 20rem;
+    }
+  }
 }
 
 .main{
   flex-grow: 1;
+  position: relative;
+  z-index: 2;
+  background-color: var(--white);
   &--mt{
     margin-top: var(--header);
   }

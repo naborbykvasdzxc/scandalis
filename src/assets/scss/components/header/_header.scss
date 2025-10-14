@@ -4,6 +4,8 @@
     width: 100vw;
     z-index: 5;
 
+
+
     &__top {
         background-color: var(--black);
         color: var(--white);
@@ -12,18 +14,35 @@
         .wrapper {
             display: flex;
             justify-content: space-between;
+
+
         }
     }
 
     &--intro {
+
+        @include mobile {
+            background-color: #F7F7F5;
+        }
+
         .header__logo {
             transform: translateY(150rem) scale(5.9);
             pointer-events: none;
+
+            @include mobile {
+                transform: translateY(20rem) scale(1.5);
+            }
         }
 
         &.scrolled {
+
+            @include mobile {
+                background-color: transparent;
+            }
+
             .header__logo {
                 transform: translateY(0) scale(1);
+                pointer-events: auto;
             }
         }
     }
@@ -34,6 +53,10 @@
         gap: 10rem;
         position: relative;
         z-index: 10;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__prev,
@@ -64,6 +87,12 @@
         @include iconMask("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7.05078 7L16.9503 16.8995M16.9503 7L7.05078 16.8995' stroke='%23BCBCBC' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E", 24rem);
         transition: opacity var(--transition);
 
+        @include mobile {
+            position: absolute;
+            top: 0rem;
+            right: 16rem;
+        }
+
         &:hover {
             opacity: 0.7;
         }
@@ -77,6 +106,9 @@
 
     &__slide {
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__main {
@@ -84,6 +116,22 @@
         backdrop-filter: blur(6.5rem);
         color: var(--black);
         padding: 20rem 0;
+
+        .wrapper {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+
+            @include mobile {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+
+        @include mobile {
+            padding-block: 12rem;
+        }
     }
 
     &__menu {
@@ -92,6 +140,10 @@
         gap: 10rem;
         width: 262rem;
         @include smallTextSB;
+
+        @include mobile {
+            display: none;
+        }
 
         &::before {
             content: '';
@@ -110,15 +162,19 @@
         }
     }
 
-    .wrapper {
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-    }
+
 
     &__logo {
         width: 294rem;
         transition: transform var(--transition-2);
+
+        @include tablet {
+            width: 187rem;
+        }
+
+        @include mobile {
+            width: 200rem;
+        }
     }
 
     &__right {
@@ -126,6 +182,10 @@
         display: flex;
         gap: 30rem;
         align-items: center;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__search {

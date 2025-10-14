@@ -1,11 +1,33 @@
 .stories {
     padding: 60rem 0;
 
+    @include tablet {
+        padding: 40rem 0;
+
+        .wrapper{
+            max-width: 100%;
+            
+        }
+    }
+
     &__container {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         gap: 40rem;
+
+        @include tablet {
+            justify-content: flex-start;
+            gap: 20rem;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @include mobile{
+            gap: 8rem;
+        }
     }
 
     &__item {
@@ -24,6 +46,10 @@
                 filter: grayscale(100%);
             }
         }
+
+        @include mobile{
+            gap: 8rem;
+        }
     }
 
     &__image {
@@ -35,6 +61,12 @@
         align-items: center;
         justify-content: center;
         padding: 5rem;
+
+        @include mobile{
+            width: 56rem;
+            height: 56rem;
+            padding: 3rem;
+        }
 
         &-inner {
             width: 100%;
@@ -54,6 +86,12 @@
         @include button;
         text-align: center;
         width: 194rem;
+        
+
+        @include mobile{
+            width: 100rem;
+            @include bodyCups;
+        }
     }
 }
 

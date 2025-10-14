@@ -40,14 +40,22 @@ export function initSwipers() {
 
   const collectionsSwiper = new Swiper(".collections__swiper", {
     modules: [Navigation, EffectFade, Autoplay],
-    slidesPerView: 3,
-    spaceBetween: 20 * getRem(),
+    slidesPerView: 1,
+    spaceBetween: 8 * getRem(),
     loop: true,
-    initialSlide: 1,
+    initialSlide: 2,
     loopAdditionalSlides: 1,
     navigation: {
       nextEl: ".collections__next",
       prevEl: ".collections__prev",
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        initialSlide: 1,
+        spaceBetween: 20 * getRem(),
+      },
     },
   });
 
@@ -63,7 +71,7 @@ export function initSwipers() {
 
   const projectsSwiper = new Swiper(".projects__swiper", {
     modules: [Navigation, Autoplay],
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     loop: true,
     initialSlide: 1,
     loopAdditionalSlides: 1,
@@ -71,20 +79,48 @@ export function initSwipers() {
       nextEl: ".project__next",
       prevEl: ".project__prev",
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+    },
   });
 
   const articlesSwiper = new Swiper(".articles__swiper", {
     modules: [Navigation, Autoplay],
-    slidesPerView: 3,
-    spaceBetween: 40 * getRem(),
+    slidesPerView: 'auto',
+    spaceBetween: 8 * getRem(),
     loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20 * getRem(),
+      },
+
+      1200: {
+        spaceBetween: 40 * getRem(),
+      },
+    },
   });
 
   const jobsSwiper = new Swiper(".jobs__swiper", {
     modules: [Navigation, Autoplay],
-    slidesPerView: 4,
-    spaceBetween: 40 * getRem(),
+    slidesPerView: 'auto',
+    spaceBetween: 8 * getRem(),
     loop: true,
+    navigation: {
+      nextEl: ".jobs__next",
+      prevEl: ".jobs__prev",
+    },
+    breakpoints: {
+      1200: {
+        spaceBetween: 40 * getRem(),
+      },
+      768: {
+        spaceBetween: 20 * getRem(),
+        slidesPerView: 4,
+      },
+    },
   });
 
   const seenSwiper = new Swiper(".seen__swiper", {
@@ -92,5 +128,18 @@ export function initSwipers() {
     slidesPerView: 4,
     spaceBetween: 40 * getRem(),
     loop: true,
+    navigation: {
+      nextEl: ".seen__next",
+      prevEl: ".seen__prev",
+    },
+
+    breakpoints: {
+      1200: {
+        spaceBetween: 40 * getRem(),
+      },
+      768: {
+        spaceBetween: 20 * getRem(),
+      },
+    },
   });
 }

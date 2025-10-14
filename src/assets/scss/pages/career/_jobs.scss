@@ -7,4 +7,39 @@
     &__container{
         position: relative;
     }
+
+    &__prev {
+        left: -35rem;
+
+        @include tablet{
+            left: -18rem;
+        }
+
+        @include mobile{
+            display: none;
+        }
+    }
+    &__next {
+        right: -35rem;
+
+        @include tablet{
+            right: -18rem;
+        }
+
+        @include mobile{
+           display: none;
+        }
+    }
+
+    &__swiper{
+        @include mobile{
+            overflow: visible;
+
+            .career__item{
+                width: 309rem;
+            }
+        }
+    }
+
+
 }

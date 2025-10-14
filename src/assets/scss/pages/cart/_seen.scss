@@ -1,7 +1,26 @@
-.seen{
-    &__title{
+.seen {
+    &__title {
         @include h2;
         margin-bottom: 60rem;
         text-align: center;
+    }
+
+    &__container{
+        position: relative;
+    }
+
+    &__prev{
+        left: -30rem;
+
+        @include tablet{
+            left: 0;
+        }
+    }
+    &__next{
+        right: -30rem;
+
+        @include tablet{
+            right: 0;
+        }
     }
 }

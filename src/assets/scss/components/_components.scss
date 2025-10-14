@@ -1,7 +1,9 @@
 @import "header/header", 'header/burger', 'header/search';
 
-@import "catalog/product", "catalog/wishlist", "catalog/catalog", "catalog/goods";
+@import "catalog/product", "catalog/wishlist", "catalog/catalog", "catalog/goods", "catalog/filter";
 
 @import "footer/footer";
 
 @import "ui/buttons", "ui/form", "footer/history", "ui/breadcrumbs", "ui/ui", "ui/pagination";
+
+@import "modal/modal";

@@ -4,6 +4,10 @@
         display: flex;
         flex-direction: column;
         gap: 60rem;
+
+        @include mobile{
+            gap: 40rem;
+        }
     }
 
     &__top {
@@ -14,6 +18,10 @@
         text-align: center;
         max-width: 573rem;
         margin: 0 auto;
+
+        @include mobile{
+            gap: 12rem;
+        }
     }
 
     &__title {
@@ -28,6 +36,15 @@
     &__main {
         display: flex;
         gap: 63rem;
+
+        @include tablet{
+            flex-direction: column;
+            position: relative;
+        }
+
+        @include mobile{
+            gap: 32rem;
+        }
     }
 
     &__block {
@@ -36,8 +53,14 @@
         flex-direction: column;
         gap: 280rem;
 
+
+
         &--left {
             text-align: right;
+
+            @include tablet{
+                text-align: left;
+            }
         }
 
         &--right {
@@ -45,32 +68,102 @@
 
             .path__item {
                 flex-direction: row-reverse;
+
+                @include tablet{
+                    flex-direction: row;
+                }
+
+                @include mobile{
+                    flex-direction: column;
+                    gap: 16rem;
+                }
             }
+        }
+
+        @include tablet{
+            display: contents;
         }
     }
 
     &__progress {
         width: 3rem;
-        height: 1191rem;
+        height: 1291rem;
         background-color: #E6E6E6;
         flex: 0 0 auto;
+
+        @include tablet{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        &-line {
+            background: linear-gradient(180deg, #020202 0%, #AFAFAF 100%);
+            width: 100%;
+            min-height: 44rem;
+            max-height: 100%;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 9rem;
+                height: 9rem;
+                position: absolute;
+                left: -3rem;
+                bottom: 0;
+                background-color: var(--black);
+            }
+        }
     }
 
     &__item {
         display: flex;
         align-items: flex-start;
         gap: 40rem;
+
+        @include tablet{
+            flex-direction: row;
+            max-width: 90%;
+            margin-left: auto;
+        }
+
+        @include mobile{
+            flex-direction: column;
+            gap: 16rem;
+        }
+
+        &.is-visible {
+            .path__image {
+                filter: grayscale(0);
+            }
+
+            .path__date {
+                color: var(--black);
+            }
+
+            .path__text {
+                color: var(--grey-700);
+            }
+        }
     }
 
     &__image {
         width: 573rem;
         height: 500rem;
         flex: 0 0 auto;
+        filter: grayscale(100%);
+        transition: filter var(--transition);
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @include mobile{
+            width: 100%;
+            height: 222rem;
         }
     }
 
@@ -78,14 +171,22 @@
         display: flex;
         flex-direction: column;
         gap: 38rem;
+
+        @include mobile{
+            gap: 8rem;
+        }
     }
 
     &__date {
         @include h2;
+        color: var(--grey-300);
+        transition: color var(--transition);
     }
 
     &__text {
         @include bodyCups;
-        color: var(--grey-700);
+        color: var(--grey-300);
+        transition: color var(--transition);
+
     }
 }

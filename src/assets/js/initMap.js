@@ -7,6 +7,7 @@ import { Vector as VectorSource } from "ol/source.js";
 import { Vector as VectorLayer } from "ol/layer.js";
 import Overlay from "ol/Overlay.js";
 import  MapEvent  from "ol/MapEvent.js";
+import { boundingExtent } from "ol/extent.js";
 
 export default class VGMap {
   #map = null;
@@ -95,13 +96,6 @@ export default class VGMap {
 
     view.setMinZoom(config.minZoom || this.#settings.minZoom || 0);
     view.setMaxZoom(config.maxZoom || this.#settings.maxZoom || 28);
-    view.animate({
-      center: fromLonLat(
-        config.center.toReversed() || this.#settings.defaultCenter.toReversed()
-      ),
-      zoom: config.zoom || this.#settings.defaultZoom,
-      duration: 400,
-    });
 
     this.#currentOverlays.forEach((overlay) =>
       this.#map.removeOverlay(overlay)
@@ -110,6 +104,28 @@ export default class VGMap {
 
     if (Array.isArray(config.markers) && config.markers.length > 0) {
       this.#addMarkers(config.markers);
+      
+      // Вычисляем extent на основе всех маркеров
+      const coordinates = config.markers.map(marker => 
+        fromLonLat(marker.position.toReversed())
+      );
+      const extent = boundingExtent(coordinates);
+      
+      // Используем fit для отображения всех маркеров с padding
+      view.fit(extent, {
+        padding: [30, 30, 30, 30], // отступы в пикселях
+        duration: 400,
+        maxZoom: config.zoom || this.#settings.defaultZoom, // ограничиваем максимальный зум
+      });
+    } else {
+      // Если маркеров нет, используем обычную анимацию
+      view.animate({
+        center: fromLonLat(
+          config.center.toReversed() || this.#settings.defaultCenter.toReversed()
+        ),
+        zoom: config.zoom || this.#settings.defaultZoom,
+        duration: 400,
+      });
     }
 
     this.#map.updateSize();

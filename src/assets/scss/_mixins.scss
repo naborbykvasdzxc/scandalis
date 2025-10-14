@@ -28,6 +28,18 @@
   flex: 0 0 auto;
 }
 
+@mixin tablet{
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin h2 {
   font-size: 40rem;
   font-style: normal;
@@ -35,6 +47,15 @@
   line-height: 110%;
   letter-spacing: 4rem;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 32rem;
+  }
+
+  @include mobile {
+    font-size: 22rem;
+    letter-spacing: 2.2rem;
+  }
 }
 
 @mixin h3 {
@@ -44,6 +65,15 @@
   line-height: 140%;
   letter-spacing: 2.8rem;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 24rem;
+  }
+
+  @include mobile{
+    font-size: 18rem;
+    letter-spacing: 1.8rem;
+  }
 }
 
 @mixin h4 {
@@ -53,6 +83,16 @@
   line-height: 140%;
   letter-spacing: 2rem;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 18rem;
+  }
+
+  @include mobile{
+    font-size: 14rem;
+    letter-spacing: 1.4rem;
+
+  }
 }
 
 @mixin bodyCups {
@@ -62,6 +102,12 @@
   line-height: 140%;
   letter-spacing: 1.4rem;
   text-transform: uppercase;
+
+  @include mobile{
+    font-size: 12rem;
+    letter-spacing: 1.2rem;
+  }
+
 }
 
 @mixin bodyCupsBold {
@@ -71,6 +117,10 @@
   line-height: 140%;
   letter-spacing: 1.4rem;
   text-transform: uppercase;
+
+  @include mobile{
+    font-size: 12rem;
+  }
 }
 
 @mixin body9 {
@@ -79,6 +129,15 @@
   font-weight: 400;
   line-height: 110%;
   letter-spacing: 1.44rem;
+
+  @include tablet {
+    font-size: 14rem;
+  }
+
+  @include mobile{
+    font-size: 12rem;
+    letter-spacing: 1.08rem;
+  }
 }
 
 @mixin bigTextCupsSB {
@@ -88,6 +147,15 @@
   line-height: 110%;
   letter-spacing: 1.62rem;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 16rem;
+  }
+
+  @include mobile{
+    font-size: 14rem;
+    letter-spacing: 1.4rem;
+  }
 }
 
 @mixin button {
@@ -97,6 +165,10 @@
   line-height: 110%;
   letter-spacing: 1.82rem;
   text-transform: uppercase;
+
+  @include mobile{
+    font-size: 10rem;
+  }
 }
 
 @mixin smallTextReg {
@@ -105,6 +177,14 @@
   font-weight: 400;
   line-height: 120%;
   letter-spacing: 0.7rem;
+
+  @include tablet {
+    font-size: 12rem;
+  }
+
+  @include mobile{
+    font-size: 10rem;
+  }
 }
 
 @mixin smallTextSB {
@@ -113,6 +193,14 @@
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 1.4rem;
+
+  @include tablet {
+    font-size: 12rem;
+  }
+
+  @include mobile{
+    font-size: 10rem;
+  }
 }
 
 @mixin smallTextReg2 {
@@ -128,5 +216,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 
 

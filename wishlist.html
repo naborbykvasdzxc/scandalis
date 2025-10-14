@@ -387,13 +387,13 @@
         </div>
         <div class="catalog">
           <div class="catalog__top">
-            <!-- <button
+            <button
               class="catalog__filter"
-              data-filter-button
+              data-modal="filter"
               aria-label="Фильтры"
             >
               Фильтры
-            </button> -->
+            </button>
             <div class="catalog__view">
               <div
                 class="catalog__view-item big active"
@@ -753,6 +753,148 @@
       </div>
       <div class="stories-modal__preloader"></div>
       <div class="stories-modal__fade"></div>
+    </div>
+
+    <div class="modal" data-modal-id="filter">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body modal__body--filter">
+        <buton class="modal__close" data-modal-close=""></buton>
+        <div class="modal__filter">
+          <div class="modal__top">
+            <div class="modal__title">Фильтры</div>
+            <button class="modal__close" data-modal-close=""></button>
+          </div>
+          <form class="filter">
+            <div class="filter__category">
+              <button class="filter__head" type="button" data-collapse>
+                Категория
+              </button>
+              <div class="filter__wrapper">
+                <div class="filter__content">
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Футболки</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Штаны</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Куртки</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Свитеры</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Шорты</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Лонгсливы</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter__category">
+              <button class="filter__head" type="button" data-collapse>
+                Категория
+              </button>
+              <div class="filter__wrapper">
+                <div class="filter__content">
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Футболки</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Штаны</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Куртки</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Свитеры</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Шорты</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Лонгсливы</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="filter__category">
+              <button class="filter__head" type="button" data-collapse>
+                Категория
+              </button>
+              <div class="filter__wrapper">
+                <div class="filter__content">
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Футболки</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Штаны</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Куртки</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Свитеры</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-1" />
+                    <span class="filter__decor"></span>
+                    <span>Шорты</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Лонгсливы</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Лонгсливы</span>
+                  </label>
+                  <label class="filter__item">
+                    <input type="checkbox" name="category" value="value-2" />
+                    <span class="filter__decor"></span>
+                    <span>Лонгсливы</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/assets/js/main.js"></script>

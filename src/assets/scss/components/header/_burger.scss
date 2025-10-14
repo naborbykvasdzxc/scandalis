@@ -202,18 +202,30 @@
     }
 }
 
-body.menu-open {
-    overflow: hidden;
-    .burger {
+
+.burger {
+
+
+    &.pp-animate {
+
+
+
+        .burger__body {
+            transform: translateX(0);
+        }
+
+        .burger__fade {
+            opacity: 1;
+        }
+    }
+
+    &.popup-active {
         translate: 0 0;
         pointer-events: auto;
 
-        &__fade {
-            opacity: 1;
-        }
 
-        &__body {
-            transform: translateX(0);
-        }
     }
+
+
+
 }

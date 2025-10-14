@@ -44,5 +44,16 @@
         text-align: center;
         z-index: 3;
         width: 1256rem;
+
+        @include tablet {
+            width: 990rem;
+            font-size: 42rem;
+        }
+
+        @include mobile{
+            font-size: 14rem;
+            letter-spacing: 1.4rem;
+            width: 328rem;
+        }
     }
 }

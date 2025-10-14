@@ -9,6 +9,15 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 40rem;
+
+        @include tablet {
+            gap: 20rem;
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr;
+            gap: 32rem;
+        }
     }
 
     &__item {
@@ -24,6 +33,10 @@
                     opacity: 1;
                 }
             }
+        }
+
+        @include mobile{
+            gap: 16rem;
         }
     }
 
@@ -52,10 +65,14 @@
         z-index: 2;
         background: rgba(72, 72, 72, 0.20);
         backdrop-filter: blur(7.25rem);
-        padding: 5rem 10rem;
+        padding: 5rem 10rem 5rem 55rem;
         @include bodyCupsBold;
         color: var(--white);
-        padding-left: 55rem;
+
+
+        @include mobile{
+            padding: 8rem 12rem 8rem 16rem;
+        }
     }
 
     &__content {
@@ -63,6 +80,12 @@
         display: flex;
         flex-direction: column;
         gap: 10rem;
+
+
+        @include mobile{
+            padding-inline: 12rem;
+            gap: 8rem;
+        }
 
     }
 
@@ -75,6 +98,10 @@
         @include bodyCups;
         color: var(--grey-600);
         @include lineClamp(1);
+
+        @include mobile{
+           @include lineClamp(2);
+        }
     }
 
     &__link {
@@ -83,6 +110,10 @@
         border-bottom: 2rem solid currentColor;
         opacity: 0;
         transition: opacity var(--transition);
+
+        @media (hover: none) {
+            display: none;
+        }
     }
 
     &__navigation {

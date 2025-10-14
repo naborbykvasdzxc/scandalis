@@ -18,18 +18,34 @@
             flex: 0 0 auto;
         }
     }
+
+    @include mobile{
+        gap: 8rem;
+
+        li{
+            gap: 12rem;
+
+            &::before {
+                width: 4rem;
+                height: 4rem;
+                margin-top: 4rem;
+            }
+        }
+    }
 }
 
 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
-input[type="password"]
+input[type="password"],
+input[type="number"]
  {
     text-transform: uppercase;
     @include bigTextCupsSB;
     border-bottom: 1rem solid var(--grey-200, #E6E6E6);
     padding: 15rem 20rem;
+    width: 100%;
 
     &::-webkit-input-placeholder {
         text-transform: uppercase;
@@ -51,7 +67,9 @@ input[type="password"]
         color: var(--grey-300, #BCBCBC);
     }
 
-
+    &.error {
+        border-bottom: 1rem solid var(--error);
+    }
 }
 
 

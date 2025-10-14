@@ -90,6 +90,16 @@
         gap: 40rem;
         &-4{
             grid-template-columns: repeat(4, 1fr);
+            @include tablet{
+                gap: 20rem;
+            }
+        }
+
+        &-2{
+            grid-template-columns: repeat(2, 1fr);
+            @include tablet{
+                gap: 20rem;
+            }
         }
     }
 }

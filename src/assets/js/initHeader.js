@@ -26,7 +26,7 @@ export function initHeader() {
   if (burger) {
     const burgerButtons = document.querySelectorAll("[data-burger-button]");
 
-    handlePopup(burger, burgerButtons, "menu-open");
+    // handlePopup(burger, burgerButtons, "menu-open");
 
     const burgerSubmenuButtons = document.querySelectorAll("[data-submenu]");
     const burgerSubmenus = document.querySelectorAll("[data-submenu-target]");

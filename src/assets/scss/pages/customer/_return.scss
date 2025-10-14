@@ -4,6 +4,10 @@
     gap: 30rem;
     max-width: 727rem;
 
+    @include mobile{
+        gap: 20rem;
+    }
+
     &__title {
         @include h3;
     }
@@ -12,6 +16,10 @@
         display: flex;
         flex-direction: column;
         gap: 20rem;
+
+        @include mobile{
+            gap: 16rem;
+        }
     }
 
     &__head{
@@ -25,6 +33,10 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @include mobile{
+            width: 160rem;
         }
     }
 }

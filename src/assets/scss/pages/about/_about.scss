@@ -3,6 +3,12 @@
     width: 100%;
     aspect-ratio: 1920 / 900;
 
+    @include mobile{
+        aspect-ratio: unset;
+        height: 400rem;
+        margin-top: var(--header);
+    }
+
     &__bg {
         position: absolute;
         top: 0;
@@ -31,6 +37,11 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+
+        @include mobile{
+
+            padding: 16rem calc((100% - var(--container-width)) / 2) 40rem;
+        }
     }
 
     // &__title {

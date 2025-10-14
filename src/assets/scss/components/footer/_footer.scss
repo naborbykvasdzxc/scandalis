@@ -1,6 +1,17 @@
 .footer {
+    overflow: hidden;
     &__main {
         position: relative;
+        z-index: 2;
+        margin-bottom: 337rem;
+
+        @include tablet {
+            margin-bottom: 246rem;
+        }
+
+        @include mobile{
+            margin-bottom: 169rem;
+        }
     }
 
     &__bg {
@@ -25,6 +36,16 @@
     &__container {
         padding: 100rem 0 86rem;
         color: var(--white);
+        position: relative;
+
+        @include tablet {
+            padding: 60rem 0 46rem;
+        }
+
+        @include mobile{
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
 
     &__block {
@@ -33,13 +54,46 @@
         flex-direction: column;
         gap: 40rem;
 
+        @include mobile{
+            gap: 16rem;
+        }
+
+        .footer__list{
+            @include bodyCups;
+
+            // @include mobile{
+            //     max-width: 55%;
+            // }
+        }
+
+
         &:nth-child(2) {
             margin-left: auto;
             align-self: flex-end;
+
+            @include tablet {
+                align-self: flex-start;
+                margin-left: 0;
+            }
         }
 
         &--subscribe {
             width: unset;
+        }
+
+        @include mobile{
+            width: fit-content;
+        }
+
+        &--mobile-3{
+            position: absolute;
+            right: 0;
+            top: 280rem;
+            max-width: 40%;
+        }
+
+        &--mobile-2{
+            margin-top: 80rem;
         }
     }
 
@@ -52,19 +106,45 @@
         flex-direction: column;
         gap: 30rem;
         color: var(--grey-300, #BCBCBC);
-        @include bodyCups;
+      
+
+        @include mobile{
+            gap: 12rem;
+        }
+
+
     }
 
     &__left {
         display: flex;
         gap: 40rem;
         flex-grow: 1;
+
+        @include tablet {
+            justify-content: space-between;
+        }
+
+        @include mobile{
+            display: contents;
+        }
+
+
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         gap: 60rem;
+        @include smallTextReg;
+
+        @include tablet {
+            order: -1;
+        }
+
+        @include mobile{
+            width: 100%;
+            gap: 24rem;
+        }
     }
 
     &__logo {
@@ -75,19 +155,37 @@
             height: 100%;
             object-fit: contain;
         }
+
+        @include mobile{
+            width: 220rem;
+        }
     }
 
     &__legal {
         display: flex;
         flex-direction: column;
         gap: 10rem;
-        @include bodyCups;
+        a{
+            text-decoration: underline;
+        }
+
+        @include mobile{
+            gap: 8rem;
+        }
     }
 
     &__container {
         display: flex;
         gap: 40rem;
         align-items: stretch;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile{
+            flex-direction: row;
+        }
     }
 
     &__right {
@@ -96,6 +194,15 @@
         gap: 136rem;
         align-items: flex-end;
         width: 573rem;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        @include mobile{
+            display: contents;
+        }
     }
 
     &__tel {
@@ -150,6 +257,10 @@
         display: flex;
         gap: 10rem;
         margin-bottom: 20rem;
+
+        @include mobile{
+            gap: 8rem;
+        }
     }
 
     &__input {
@@ -162,6 +273,30 @@
     &__send{
         >p{
             margin-bottom: 60rem;
+            @include smallTextReg;
+
+            @include mobile{
+                margin-bottom: 40rem;
+            }
         }
+    }
+
+    &__form{
+        input[type="text"],
+        input[type="email"]{
+            width: 198rem;
+            flex: 0 0 auto;
+            @include bodyCups;
+        }
+
+        button{
+            padding: 14rem 16rem;
+        }
+    }
+
+    .form__policy{
+        color: var(--grey-600);
+        @include smallTextReg;
+        gap: 12rem;
     }
 }

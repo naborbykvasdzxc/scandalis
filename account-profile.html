@@ -422,9 +422,13 @@
                   </div>
                 </div>
                 <div class="personal__bottom">
-                    <button class="link">Редактировать данные</button>
-                    <button class="link">Сменить пароль</button>
-                    <button class="link link--error">Удалить аккаунт</button>
+                  <button class="link" data-modal="edit-profile">
+                    Редактировать данные
+                  </button>
+                  <button class="link" data-modal="edit-password">
+                    Сменить пароль
+                  </button>
+                  <button class="link link--error" data-modal="delete-profile">Удалить аккаунт</button>
                 </div>
               </div>
             </div>
@@ -579,6 +583,121 @@
       </div>
       <div class="stories-modal__preloader"></div>
       <div class="stories-modal__fade"></div>
+    </div>
+
+    <div class="modal" data-modal-id="edit-profile">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body modal__body--account">
+        <buton class="modal__close" data-modal-close=""></buton>
+        <div class="modal__account">
+          <div class="modal__title">Редактирование личных данных</div>
+          <form action="" class="modal__form">
+            <label class="modal__label">
+              <span class="modal__label-decor">Имя</span>
+              <input type="text" name="name" placeholder="Имя" />
+            </label>
+            <label class="modal__label">
+              <span class="modal__label-decor">Фамилия</span>
+              <input type="text" name="surname" placeholder="Фамилия" />
+            </label>
+            <label class="modal__label">
+              <span class="modal__label-decor">Отчество</span>
+              <input type="text" name="patronymic" placeholder="Отчество" />
+            </label>
+            <label class="modal__label">
+              <span class="modal__label-decor">Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" />
+            </label>
+            <label class="modal__label">
+              <span class="modal__label-decor">Почта</span>
+              <input type="email" name="email" placeholder="example@mail.com" />
+            </label>
+            <div class="modal__form-bottom">
+              <label class="form__policy">
+                <input type="checkbox" name="policy" />
+                <span class="policy-decor"></span>
+                <p>
+                  Я даю своё согласие на получение email-рассылки,
+                  <a href="" target="_blank">обработку персональных данных</a>
+                  и принимаю условия
+                  <a href="" target="_blank">политики конфиденциальности.</a>
+                </p>
+              </label>
+              <button type="submit" class="button button--filled modal__button">
+                Сохранить изменения
+              </button>
+              <button
+                type="button"
+                class="button button--border modal__button"
+                data-modal-close=""
+              >
+                Отменить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal-id="edit-password">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body modal__body--account">
+        <buton class="modal__close" data-modal-close=""></buton>
+        <div class="modal__account">
+          <div class="modal__title">Изменить пароль</div>
+          <form action="" class="modal__form">
+            <label class="modal__label">
+              <span class="modal__label-decor">Старый пароль</span>
+              <input type="password" name="old-password" placeholder="пароль" />
+            </label>
+            <label class="modal__label">
+              <span class="modal__label-decor">Новый пароль</span>
+              <input type="password" name="new-password" placeholder="пароль" />
+            </label>
+            <div class="modal__form-bottom">
+              <label class="form__policy">
+                <input type="checkbox" name="policy" />
+                <span class="policy-decor"></span>
+                <p>
+                  Я даю своё согласие на получение email-рассылки,
+                  <a href="" target="_blank">обработку персональных данных</a>
+                  и принимаю условия
+                  <a href="" target="_blank">политики конфиденциальности.</a>
+                </p>
+              </label>
+              <button type="submit" class="button button--filled modal__button">
+                Изменить пароль
+              </button>
+              <button
+                type="button"
+                class="button button--border modal__button"
+                data-modal-close=""
+              >
+                Отменить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal-id="delete-profile">
+      <div class="modal__fade" data-modal-close></div>
+      <div class="modal__body modal__body--account">
+        <buton class="modal__close" data-modal-close=""></buton>
+        <div class="modal__delete">
+          <div class="modal__title">удалить аккаунт</div>
+          <div class="modal__subtitle">
+            Вы действительно хотите удалить аккаунт?
+          </div>
+          <p>
+            При удалении обнулится история заказов и накопленные бонусы.
+            После удаления профиля мы не сможем их восстановить.
+          </p>
+          <div class="modal__bottom">
+            <button class="button button--filled modal__button">Удалить аккаунт</button>
+            <button class="button button--border modal__button">Отменить</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="./src/assets/js/main.js"></script>
