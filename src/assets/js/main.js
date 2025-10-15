@@ -11,6 +11,7 @@ import { initAnimations } from "./initAnimations";
 import { initSertificate } from "./initSertificate";
 import { initModals } from "./initModals";
 import { utils } from "./utils";
+import { initTabs } from "./initTabs";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAnimations();
   initSertificate();
   initModals();
+  initTabs();
   utils();
 });
 

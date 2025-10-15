@@ -19,10 +19,10 @@
         }
     }
 
-    @include mobile{
+    @include mobile {
         gap: 8rem;
 
-        li{
+        li {
             gap: 12rem;
 
             &::before {
@@ -39,8 +39,7 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="password"],
-input[type="number"]
- {
+input[type="number"] {
     text-transform: uppercase;
     @include bigTextCupsSB;
     border-bottom: 1rem solid var(--grey-200, #E6E6E6);
@@ -82,4 +81,37 @@ input:-webkit-autofill:active {
     font-size: inherit;
     color: inherit;
     background-color: inherit;
+}
+
+.tab-btn {
+    @include smallTextSB;
+    padding-bottom: 4rem;
+    border-bottom: 1rem solid transparent;
+    transition: border-color var(--transition), color var(--transition);
+    color: var(--grey-500);
+
+    &.active {
+        border-bottom: 1rem solid var(--black);
+        color: var(--black);
+    }
+}
+
+.tab-content{
+    display: none;
+
+    &.active {
+        display: block;
+        animation: fadeUp var(--transition);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

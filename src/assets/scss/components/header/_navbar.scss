@@ -1,0 +1,24 @@
+.mobile-navbar {
+    display: none;
+    padding: 8rem 0;
+
+    @include mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        left: 0;
+        z-index: 10;
+        border: 1rem solid #E5E5E5;
+        background: rgba(255, 255, 255, 0.80);
+        backdrop-filter: blur(10rem);
+
+        height: 53rem;
+
+        .wrapper{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+}

@@ -37,37 +37,39 @@
                 </div>
                 <div class="goods__top">
                     <h1 class="goods__title">Анорак на молнии</h1>
-                    <button class="goods__favorite" aria-label="Избранное"></button>
+                    <button class="goods__wishlist" aria-label="добавить в избранное"></button>
                 </div>
                 <div class="goods__num">Артикул: Поло011</div>
                 <div class="goods__color">
                     <div class="goods__color-name">Цвет: <span>Розовый</span></div>
                     <div class="goods__list">
-                        <label class="goods__color-value">
-                            <input type="radio" name="color" value="[#EDE1D4, розовый]">
-                            <span></span style="background-color: #EDE1D4;">
+                        <label class="goods__color-value active">
+                            <input type="radio" checked name="color" value="[#EDE1D4, розовый]">
+                            <span style="background-color: #EDE1D4;"></span>
                         </label>
                         <label class="goods__color-value">
                             <input type="radio" name="color" value="[#E3EFD4, зеленый]">
-                            <span></span style="background-color: #E3EFD4;">
+                            <span style="background-color: #E3EFD4;"></span>
                         </label>
                     </div>
                 </div>
                 <div class="goods__size">
+
+                    <div class="goods__size-name">Размер: <span>M</span></div>
                     <div class="goods__size-picker">
-                        <div class="goods__size-name">Размер: <span>M</span></div>
                         <div class="goods__list">
                             <label class="goods__size-value">
                                 <input type="radio" name="size" value="M">
-                                <span></span style="width: 40rem; height: 40rem;">
+                                <span>M</span>
                             </label>
                             <label class="goods__size-value">
                                 <input type="radio" name="size" value="L">
-                                <span></span style="width: 40rem; height: 40rem;">
+                                <span>L</span>
                             </label>
                         </div>
+                        <button class="goods__size-tooltip">Таблица размеров</button>
                     </div>
-                    <button class="goods__size-tooltip">Таблица размеров</button>
+
                 </div>
                 <div class="goods__price">
                     <div class="goods__price-new">17 990 ₽</div>
@@ -75,13 +77,41 @@
                 </div>
                 <div class="goods__bottom">
                     <div class="goods__controls">
-                        <button class="goods__button">Добавить в корзину</button>
+                        <button class="goods__button button button--filled">Добавить в корзину [M]</button>
                     </div>
-                    <div class="goods__info">Долями по 7 687</div>
+                    <div class="goods__info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="108" height="16" viewBox="0 0 108 16"
+                            fill="none">
+                            <path
+                                d="M39.2487 15.9928H36.7414V13.4826H28.0064V15.9804H25.4802V10.9373C25.536 10.9099 25.5962 10.8935 25.6578 10.889C26.6693 11.0135 27.2222 10.4125 27.6083 9.55924C28.2664 8.10498 28.4531 6.54368 28.5354 4.96694C28.5761 4.18268 28.5424 3.39431 28.5424 2.57198H37.464V10.8787H39.2507L39.2487 15.9928ZM34.9477 10.8468V5.08324H31.1361C31.016 7.09327 30.739 9.04567 29.7037 10.8468H34.9477Z"
+                                fill="#020202" />
+                            <path
+                                d="M93.3225 13.4229H90.8151V6.51692C90.296 7.09121 89.8781 7.55127 89.4622 8.01441C88.7674 8.79146 88.0725 9.57365 87.3688 10.3486C87.0223 10.7315 86.7732 10.7264 86.4218 10.3394C85.2892 9.09713 84.1586 7.85385 82.9477 6.53133V13.4105H80.4661V2.53802C81.2294 2.53802 82.0007 2.52567 82.77 2.55037C82.8841 2.55037 83.0052 2.71607 83.1005 2.82516C84.3009 4.19744 85.4977 5.56971 86.6908 6.94198C86.7598 7.04113 86.8205 7.14614 86.8725 7.25589L89.5624 4.09417C89.6459 4.01071 89.7202 3.91785 89.7838 3.81732C90.5848 2.27351 91.9388 2.42583 93.3205 2.58227L93.3225 13.4229Z"
+                                fill="#020202" />
+                            <path
+                                d="M66.6161 13.4404L69.2505 10.2087C68.2291 9.73421 67.5016 8.99421 67.1661 7.91663C66.363 5.30966 67.7815 2.47523 70.8784 2.52567C72.7962 2.55757 74.7149 2.53184 76.6356 2.53184H77.2034V13.4188H74.7218V10.4773C73.8751 10.4773 73.0721 10.466 72.2691 10.4896C72.154 10.4896 72.0259 10.644 71.9336 10.7541C71.2765 11.5466 70.6432 12.3576 69.9662 13.1337C69.8013 13.306 69.5815 13.4103 69.3478 13.427C68.4733 13.4589 67.6008 13.4404 66.6161 13.4404ZM74.699 4.97517C73.4185 4.97517 72.1976 4.93606 70.9807 4.98855C70.1002 5.02663 69.598 5.65033 69.591 6.5375C69.5841 7.42467 70.0963 8.03705 70.9807 8.08954C72.0338 8.15232 73.092 8.12556 74.1471 8.13277C74.3208 8.13277 74.4945 8.1163 74.7 8.10498V4.97517H74.699Z"
+                                fill="#020202" />
+                            <path
+                                d="M96.5405 13.4404V2.56272H99.0221V9.57159C99.5184 9.00862 99.9154 8.56297 100.312 8.11321C101.846 6.36357 103.371 4.60363 104.92 2.86942C105.115 2.68183 105.366 2.56952 105.631 2.5514C106.239 2.50714 106.852 2.53699 107.5 2.53699V13.4085H104.98V6.41606C104.21 7.28882 103.533 8.05249 102.86 8.8213C101.593 10.2673 100.334 11.7206 99.0548 13.1543C98.8975 13.3138 98.6907 13.4105 98.4712 13.427C97.8518 13.462 97.2235 13.4404 96.5405 13.4404Z"
+                                fill="#020202" />
+                            <path
+                                d="M45.932 2.32703C48.7113 2.37026 51.038 4.10035 51.6564 6.61675C52.4019 9.65393 50.5497 12.7343 47.5014 13.4198C45.0804 13.9642 42.8936 13.4486 41.2717 11.4087C38.7375 8.21819 40.4776 3.38093 44.4143 2.53905C44.9136 2.43201 45.4258 2.39599 45.932 2.32703ZM45.9201 5.00296C45.7881 5.00296 45.6561 4.99473 45.5231 5.00296C44.2108 5.10588 43.1338 5.98482 42.8341 7.19825C42.5214 8.46726 42.9929 9.75068 44.0193 10.4217C45.2104 11.2029 46.8829 11.1422 48.0344 10.2879C48.6064 9.86803 49.0002 9.23562 49.1338 8.5223C49.2675 7.80897 49.1308 7.06968 48.752 6.45825C48.0929 5.40126 47.0884 5.01634 45.9201 5.00296Z"
+                                fill="#020202" />
+                            <path
+                                d="M61.8198 5.0431H57.9725C57.8206 6.21227 57.7124 7.36807 57.5119 8.5074C57.2766 9.84536 56.8776 11.1288 56.023 12.2064C55.1941 13.2459 54.1032 13.6102 52.8466 13.5217C52.7793 13.502 52.718 13.4648 52.6685 13.4137C52.619 13.3625 52.5829 13.2991 52.5637 13.2294C52.5399 12.4626 52.5508 11.6938 52.5508 10.8838C53.7995 10.96 54.2988 10.1171 54.6521 9.11977C55.1663 7.67065 55.2805 6.14949 55.341 4.62421C55.3678 3.94391 55.341 3.26258 55.341 2.5586H64.3252V13.4074H61.8198V5.0431Z"
+                                fill="#020202" />
+                            <path d="M6.00405 1.71774H8.51041V15.1591H6.00405V1.71774Z" fill="#020202" />
+                            <path d="M14.0135 14.2936H11.4942V0.855268H14.0135V14.2936Z" fill="#020202" />
+                            <path d="M2.99544 16H0.5V2.56375H2.99544V16Z" fill="#020202" />
+                            <path d="M19.4818 13.4373H17.0072V0H19.4818V13.4373Z" fill="#020202" />
+                        </svg>
+
+                        Долями по 7 687
+                    </div>
                 </div>
                 <div class="goods__description" data-tab-container>
                     <div class="goods__buttons">
-                        <button class="tab-btn" data-tab-button="description">Описание</button>
+                        <button class="tab-btn active" data-tab-button="description">Описание</button>
                         <button class="tab-btn" data-tab-button="composition">Состав и уход</button>
                         <button class="tab-btn" data-tab-button="delivery">Доставка</button>
                         <button class="tab-btn" data-tab-button="return">Возврат</button>
@@ -89,10 +119,132 @@
                         <button class="tab-btn" data-tab-button="complete">Полный комплект</button>
                     </div>
                     <div class="goods__tabs">
-                        <div class="tab-content" data-tab-content="description">
-                            <p>Футболка без рукавов SCANDALIS из плотного ВАРЕНОГО хлопка высокого качества. Дополняется
-                                все качественной печатью «Пика» - шелкографией, которая является самой стойкой и самой
+                        <div class="tab-content active" data-tab-content="description">
+                            <p>Футболка без рукавов SCANDALIS из плотного ВАРЕНОГО хлопка высокого качества. Дополняется
+                                все качественной печатью «Пика» - шелкографией, которая является самой стойкой и самой
                                 детализированной печатью среди всех видов.</p>
+                        </div>
+                        <div class="tab-content" data-tab-content="composition">
+                            <div class="composition">
+                                <p><span>Состав:</span> 100% хлопок</p>
+                                <p><span>Уход:</span> Ручная стирка при максимальной температуре 40oС, не отбеливать,
+                                    сушка в расправленном виде, глажение при 110oС, профессиональная сухая чистка.
+                                    Мягкий режим.</p>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="delivery">
+                            <div class="delivery">
+                                <ul class="dot">
+                                    <li>Доставка производится по 100% предоплате товара.</li>
+                                    <li>Сроки и стоимость зависят от удалённости города.</li>
+                                    <li>Оплата осуществляется банковскими картами через платёжный сервис.</li>
+                                    <li>Товар отправляется в течение 24 часов с момента поступления средств на счёт.
+                                    </li>
+                                    <li>После отправки будет отправлен трек-номер для отслеживания посылки — он будет
+                                        направлен на email или в СМС.</li>
+                                </ul>
+                                <p>Бесплатная доставка от 20 000₽ до пункта выдачи СДЭК.
+                                </p>
+                                <a href="/delivery">Подробнее о доставке</a>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="return">
+                            <div class="return-policy">
+                                <div class="return-policy__head">Обмен или возврат новых вещей надлежащего качества:
+                                </div>
+                                <ul class="dot">
+                                    <li>Необходимо предоставить чек в любом виде, печатном или электронном,
+                                        для подтверждения, что покупка была сделана не позднее 14 дней назад.</li>
+                                    <li>Изделие не должно иметь признаков использования, загрязнений или повреждений.
+                                    </li>
+                                </ul>
+                                <div class="return-policy__head">Гарантийный обмен или возврат вещей:</div>
+                                <ul class="dot">
+                                    <li>Не использованные вещи в течение 14 дней с момента продажи: обменять или вернуть
+                                        с возвратом денежных средств.</li>
+                                    <li>Использованные вещи в течение 14 дней с момента продажи: обменять или вернуть
+                                        с возвратом денежных средств в случае подтверждения экспертизой, что повреждение
+                                        было допущено производством, а не в процессе использования одежды.</li>
+                                </ul>
+                                <div class="return-policy__head">Порядок возврата:</div>
+                                <ul class="dot">
+                                    <li>Отвезти в один из офлайн-магазинов.</li>
+                                    <li>Оформить отправку курьерской службой СДЭК согласно тарифам.</li>
+                                </ul>
+                                <a href="/return">Подробнее о возврате</a>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="collection">
+                            <div class="product-collection">
+                                <div class="product-collection__image">
+                                    <img src="./src/assets/img/collections-image-3.webp" alt="Коллекция SCANDALIS 2025">
+                                </div>
+                                <div class="product-collection__content">
+                                    <div class="product-collection__head">Покер</div>
+                                    <div class="product-collection__text">Каждая вещь коллекции — это возможность
+                                        создать образ, полный смысла и стиля, где классическая символика игральных карт
+                                        встречается с современными тенденциями моды.</div>
+                                    <a href="#" class="link product-collection__link">Перейти в коллекцию</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab-content="complete">
+                            <div class="complete">
+                                <button class="complete__prev"></button>
+                                <div class="complete__swiper swiper">
+                                    <div class="swiper-wrapper">
+                                        <a href="#" class="product swiper-slide">
+                                            <div class="product__image">
+                                              <img
+                                                src="./src/assets/img/product-1.webp"
+                                                alt="Анорак на молнии"
+                                              />
+                                            </div>
+                                            <div class="product__content">
+                                              <div class="product__name">Анорак на молнии</div>
+                                              <div class="product__price">
+                                                <div class="product__price-new">17 990 ₽</div>
+                                                <div class="product__price-old">18 990 ₽</div>
+                                              </div>
+                                              <div class="product__info">Долями по 7 687</div>
+                                            </div>
+                                          </a>
+                                          <a href="#" class="product swiper-slide">
+                                            <div class="product__image">
+                                              <img
+                                                src="./src/assets/img/product-1.webp"
+                                                alt="Анорак на молнии"
+                                              />
+                                            </div>
+                                            <div class="product__content">
+                                              <div class="product__name">Анорак на молнии</div>
+                                              <div class="product__price">
+                                                <div class="product__price-new">17 990 ₽</div>
+                                                <div class="product__price-old">18 990 ₽</div>
+                                              </div>
+                                              <div class="product__info">Долями по 7 687</div>
+                                            </div>
+                                          </a>
+                                          <a href="#" class="product swiper-slide">
+                                            <div class="product__image">
+                                              <img
+                                                src="./src/assets/img/product-1.webp"
+                                                alt="Анорак на молнии"
+                                              />
+                                            </div>
+                                            <div class="product__content">
+                                              <div class="product__name">Анорак на молнии</div>
+                                              <div class="product__price">
+                                                <div class="product__price-new">17 990 ₽</div>
+                                                <div class="product__price-old">18 990 ₽</div>
+                                              </div>
+                                              <div class="product__info">Долями по 7 687</div>
+                                            </div>
+                                          </a>
+                                    </div>
+                                </div>
+                                <button class="complete__next"></button>
+                            </div>
                         </div>
                     </div>
                 </div>

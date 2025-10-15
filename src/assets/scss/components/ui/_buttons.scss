@@ -66,6 +66,7 @@
 
     &.swiper-button-disabled {
         opacity: 0;
+        pointer-events: none;
     }
 
     &.swiper-button-lock {

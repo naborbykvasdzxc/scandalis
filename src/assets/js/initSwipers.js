@@ -142,4 +142,14 @@ export function initSwipers() {
       },
     },
   });
+
+  const completeSwiper = new Swiper(".complete__swiper", {
+    modules: [Navigation, Autoplay],
+    slidesPerView: 2,
+    spaceBetween: 20 * getRem(),
+    navigation: {
+      nextEl: ".complete__next",
+      prevEl: ".complete__prev",
+    },
+  })
 }
